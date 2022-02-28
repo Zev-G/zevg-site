@@ -5,6 +5,7 @@
     import BigQuestion from "../BigQuestion.svelte";
     import CapstoneQuestion from "./CapstoneQuestion.svelte";
     import Footer from "./Footer.svelte";
+import SeeMore from "../SeeMore.svelte";
     
     let qnas = [
         {
@@ -72,6 +73,7 @@
             }
         />
         <BigQuestion answerComponent={CapstoneQuestion} question="Capstone Question" />
+        <SeeMore>Read more...</SeeMore>
         <QNAs qnas={qnas} />
     </div>
     <Footer />
