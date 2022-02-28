@@ -1,0 +1,86 @@
+<script>
+    import DateView from "./DateView.svelte";
+
+    export let preview;
+    export let content;
+    export let passed;
+    export let date;
+</script>
+
+<div class={"detailed-entry " + (passed ? "passed" : "")}>
+    <div class="wrapper">
+        <div class="content">
+            <div class="header">
+                <h1>{preview}</h1>
+                <div class="date-view">
+                    <DateView date={date} />
+                </div>
+            </div>
+            <hr>
+            <p>{content}</p>
+        </div>
+    </div>
+</div>
+
+<style>
+    .content {
+        background-color: var(--item-bg);
+        box-shadow: 0px 8px 10px var(--drop-shadow-color);
+        width: 50%;
+        height: 100%;
+        margin: 5% 0;
+        padding: 0 2% 2% 2%;
+        border-radius: 25px;
+    }
+
+    .detailed-entry {
+        width: 80%;
+        color: white;
+
+        animation: fadeIn 0.5s;
+    }
+
+    .date-view {
+        text-align: left;
+        position: relative;
+        /* top: 20px; */
+        /* left: 20px; */
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: right;
+    }
+
+    hr {
+        border: none;
+        border-top: solid var(--sub2-item-bg) 3px;
+    }
+
+    .passed hr {
+        border: none;
+        height: 3px;
+        background: linear-gradient(to right, var(--main-accent), var(--alt-accent));
+        /* opacity: 0.5; */
+    }
+
+    p {
+        font-size: 18px;
+        /* text-align: left; */
+        line-height: 1.5em;
+    }
+
+    h1 {
+        font-size: 35px;
+        margin-bottom: 0.1em;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
