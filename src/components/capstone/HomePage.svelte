@@ -33,7 +33,7 @@
                 component: QNAView
             },
             answer: {
-                text: "This website is hosted using Vecel on a custom domain purchased from Google Domains.",
+                text: "This website is hosted using Vercel on a custom domain purchased from Google Domains.",
                 component: QNAView
             }
         }
