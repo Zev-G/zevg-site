@@ -2,15 +2,15 @@
     export let href;
 </script>
 
-<a href={href}>
-    <div class="see-more">
+<div class="see-more">
+    <a href={href}>
         <div class="link-container">
             <div class="inner">
                 <span><slot></slot> ></span>
             </div>
         </div>
-    </div>
-</a>
+    </a>
+</div>
 
 
 <style>

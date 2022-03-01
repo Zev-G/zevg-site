@@ -1,6 +1,6 @@
 
 <p>
-    How do I build a <span class="highlighted">good looking</span> website using <span class="highlighted"> modern technologies</span>.
+    How do I build a <span class="highlighted">good looking</span> website using <span class="highlighted"> modern technologies</span>?
 </p>
 
 <style>

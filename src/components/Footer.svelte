@@ -7,9 +7,9 @@
     <span class="divide">/</span>
     <p>Zev Godfrey</p>
     <span class="divide">/</span>
-    <div class="socials">
-        <a href="https://www.github.com/Zev-G">Github</a>
-    </div>
+    <a href="https://www.github.com/Zev-G">Github</a>
+    <span class="divide">/</span>
+    <a href="/capstone">Capstone Homepage</a>
 </div>
 
 <style>
@@ -20,10 +20,6 @@
         gap: 10px;
         height: 100px;
         background-color: var(--drop-shadow-color);
-    }
-
-    .socials {
-        display: flex;
     }
 
     a {

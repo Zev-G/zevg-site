@@ -14,15 +14,23 @@
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        height: 100vh;
+        min-height: 100vh;
     }
 
     :global(*) {
         --main-bg: #111116;
+        --alt-bg: #191920;
+        --alt2-bg: #23232c;
+
+        --alt-text: rgb(233, 233, 233);
+        --main-text: white;
+
         --item-bg: #25262E;
         --sub-item-bg: #30323d;
         --sub2-item-bg:rgb(69, 72, 85);
-        --drop-shadow-color: rgba(0, 0, 0, 0.25);;
+
+        --drop-shadow-color: rgba(0, 0, 0, 0.25);
+
         --main-accent: #6791FD;
         --alt-accent: #b467fd;
     }
@@ -47,7 +55,7 @@
     }
 
     :global(body) {
-        color: #333;
+        color: var(--main-text);
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -55,7 +63,6 @@
     }
 
     :global(.page-title, .subtitle) {
-        color: white;
         margin-top: 0.1em;
         margin-bottom: 0.2em;
     }
