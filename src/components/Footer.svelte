@@ -40,4 +40,16 @@
         font-size: 30px;
         color: rgba(255, 255, 255, 0.1);
     }
+
+    @media(max-width: 750px) {
+        a, p {
+            font-size: 14px;
+        }
+    }
+
+    @media(max-width: 550px) {
+        #footer {
+            visibility: hidden;
+        }
+    }
 </style>

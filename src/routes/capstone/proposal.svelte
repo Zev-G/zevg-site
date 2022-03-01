@@ -61,7 +61,6 @@ import Section from "../../components/Section.svelte";
 <style>
 
     .header-h1 {
-        font-size: 35px;
         margin: 0;
     }
 

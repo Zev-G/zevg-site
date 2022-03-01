@@ -44,6 +44,7 @@
         align-items: center;
 
         cursor: pointer;
+        font-size: 20px;
 
         padding: 0.5em 1em;
         border-radius: 15px 15px 0 0 ;
@@ -58,5 +59,33 @@
     .header:not(.expanded) {
         border-radius: 15px;
         background-color: var(--alt2-bg);
+    }
+
+    @media(max-width: 900px) {
+        span {
+            font-size: 20px;
+        }
+
+        .content {
+            font-size: 18px;
+        }
+
+        .header {
+            font-size: 14px;
+        }
+    }
+
+    @media(max-width: 750px) {
+        span {
+            font-size: 15px;
+        }
+
+        .content {
+            font-size: 16px;
+        }
+
+        .header {
+            font-size: 12px;
+        }
     }
 </style>

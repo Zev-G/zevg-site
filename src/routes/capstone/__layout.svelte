@@ -73,7 +73,7 @@
     :global(.subtitle) {
         font-size: 40px;
     }
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
         :global(.page-title) {
             font-size: 80px;
         }
@@ -81,7 +81,7 @@
             font-size: 30px;
         }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 750px) {
         :global(.page-title) {
             font-size: 60px;
         }
@@ -89,7 +89,7 @@
             font-size: 20px;
         }
     }
-    @media (max-width: 400px) {
+    @media (max-width: 550px) {
         :global(.page-title) {
             font-size: 40px;
         }
