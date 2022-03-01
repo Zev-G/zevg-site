@@ -1,4 +1,4 @@
-import QNAView from "../"
+import QNAView from "../QNAView.svelte";
 
 export const qnas = [
     {
