@@ -3,11 +3,15 @@ import SeeMore from "../../components/SeeMore.svelte";
 import CapstoneQuestion from "../../components/capstone/CapstoneQuestion.svelte";
 import Label from "../../components/Label.svelte";
 import Section from "../../components/Section.svelte";
+import Back from "../../components/Back.svelte";
 
 
 </script>
 
 <div id="proposal">
+    <div class="back">
+        <Back href="/capstone">&lt; Back</Back>
+    </div>
     <div id="heading">
         <h1 class="page-title">Capstone Proposal</h1>
     </div>
@@ -59,6 +63,12 @@ import Section from "../../components/Section.svelte";
 
 
 <style>
+
+    .back {
+        position: absolute;
+        margin: 1.5em 1em;
+
+    }
 
     .header-h1 {
         margin: 0;
