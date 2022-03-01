@@ -2,16 +2,23 @@
     export let href;
 </script>
 
-<div class="see-more">
-    <div class="link-container">
-        <div class="inner">
-            <a href={href}><slot></slot> ></a>
+<a href={href}>
+    <div class="see-more">
+        <div class="link-container">
+            <div class="inner">
+                <span><slot></slot> ></span>
+            </div>
         </div>
     </div>
-</div>
+</a>
+
 
 <style>
     a {
+        text-decoration: none;
+    }
+
+    span {
         font-family: monospace;
         font-weight: bold;
         color: lightgray;
