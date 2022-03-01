@@ -66,7 +66,7 @@ import Back from "../../components/Back.svelte";
 
     .back {
         position: absolute;
-        margin: 1.5em 1em;
+        margin: 0.5em 1em;
 
     }
 
@@ -116,6 +116,12 @@ import Back from "../../components/Back.svelte";
         align-content: center;
         justify-content: center;
         text-align: center;
+    }
+
+    @media(max-width: 550px) {
+        .back {
+            visibility: hidden;
+        }
     }
 
 </style>
