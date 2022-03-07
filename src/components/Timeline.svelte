@@ -5,10 +5,12 @@
     import DetailedTimelineEntry from "./DetailedTimelineEntry.svelte";
     import TimelinePoint from "./TimelinePoint.svelte";
 
-    export let start;
-    export let end;
-    export let at = Date.now();
-    export let points = [];
+    export let timeline;
+    
+    let at = timeline.at ? timeline.at : Date.now();
+    let start = timeline.start;
+    let end = timeline.end;
+    let points = timeline.points;
 
     // Media Query
     let query = "(min-width: 1050px)";
@@ -43,13 +45,7 @@
         }
     }
 
-    let timeline = {
-        start: start,
-        end: end,
-        at: at
-    }
-
-    let size = 750;
+    let size = 700;
     let filled = Math.min(1, (at - start) / (end - start));
 
     function calcPoint(date) {

@@ -1,10 +1,13 @@
 <script>
     import DateView from "./DateView.svelte";
+    import SeeMore from "./SeeMore.svelte";
 
     export let preview;
     export let content;
     export let passed;
     export let date;
+
+    export let viewMore = false;
 </script>
 
 <div class={"detailed-entry " + (passed ? "passed" : "")}>
@@ -18,11 +21,21 @@
             </div>
             <hr>
             <p>{content}</p>
+            {#if viewMore}
+                <SeeMore href="/capstone/timeline/">
+                    View progress
+                </SeeMore>
+            {/if}
         </div>
     </div>
 </div>
 
 <style>
+
+    .content > :global(.see-more) {
+        font-size: 20px;
+    }
+
     .content {
         background-color: var(--item-bg);
         box-shadow: 0px 8px 10px var(--drop-shadow-color);
@@ -65,7 +78,7 @@
     }
 
     p {
-        font-size: 18px;
+        font-size: 17px;
         /* text-align: left; */
         line-height: 1.5em;
     }

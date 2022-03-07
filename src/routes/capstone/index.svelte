@@ -19,7 +19,7 @@
             <h1 class="page-title">My Capstone</h1>
             <h2 class="subtitle">Zev Godfrey</h2>
         </div>
-        <Timeline {...timeline} />
+        <Timeline timeline={timeline} />
         <BigQuestion answerComponent={CapstoneQuestion} question="Capstone Question" />
         <SeeMore href="/capstone/proposal">Read more...</SeeMore>
         <QNAs qnas={qnas} />

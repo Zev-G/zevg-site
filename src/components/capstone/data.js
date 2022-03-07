@@ -40,7 +40,7 @@ export const timeline = {
         {
             date: Date.parse("Feb 26 2022"),
             preview: "Create landing page",
-            content: "The first step towards completing my Capstone Project and answering my Capstone Question is to create a good landing page for the project. That's the website you're currently on! This website will receive updates over time but the basic version is complete a of Feb 26th 2022."
+            content: "The first step towards completing my Capstone Project and answering my Capstone Question is to create a good landing page for the project. That's the website you're currently on! This website will receive updates over time but the basic version is complete as of February 26th 2022."
         },
         {
             date: Date.parse("Mar 20 2022"),

@@ -20,7 +20,8 @@
     :global(*) {
         --main-bg: #111116;
         --alt-bg: #191920;
-        --alt2-bg: #23232c;
+        --alt2-bg: rgb(31, 31, 39);
+        --alt3-bg: rgb(35, 35, 44);
 
         --alt-text: rgb(233, 233, 233);
         --main-text: white;
@@ -68,17 +69,17 @@
     }
 
     :global(.page-title) {
-        font-size: 100px;
+        font-size: 80px;
     }
     :global(.subtitle) {
-        font-size: 40px;
+        font-size: 35px;
     }
     @media (max-width: 900px) {
         :global(.page-title) {
-            font-size: 80px;
+            font-size: 70px;
         }
         :global(.subtitle) {
-            font-size: 30px;
+            font-size: 28px;
         }
     }
     @media (max-width: 750px) {

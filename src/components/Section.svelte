@@ -1,6 +1,6 @@
 
 <script>
-    let expanded = true;
+    let expanded = false;
 </script>
 
 <div class="setion">
@@ -26,6 +26,7 @@
     span {
         font-size: 30px;
         font-weight: bold;
+        transition: rotation 0.4s;
     }
 
     .section {
@@ -34,7 +35,7 @@
 
     .content {
         padding: 0 1em;
-        font-size: 22px;
+        font-size: 20px;
         color: var(--alt-text);
     }
 
@@ -44,7 +45,7 @@
         align-items: center;
 
         cursor: pointer;
-        font-size: 20px;
+        font-size: 16px;
 
         padding: 0.5em 1em;
         border-radius: 15px 15px 0 0 ;
@@ -60,6 +61,9 @@
         border-radius: 15px;
         background-color: var(--alt2-bg);
     }
+    .header:hover:not(.expanded) {
+        background-color: var(--alt3-bg);
+    }
 
     @media(max-width: 900px) {
         span {
@@ -67,11 +71,11 @@
         }
 
         .content {
-            font-size: 18px;
+            font-size: 17px;
         }
 
         .header {
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 
@@ -81,11 +85,11 @@
         }
 
         .content {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         .header {
-            font-size: 12px;
+            font-size: 10px;
         }
     }
 </style>

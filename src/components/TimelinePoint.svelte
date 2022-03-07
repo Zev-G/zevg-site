@@ -9,11 +9,10 @@
     export let expanded = false;
     export let beginExpanded = false;
 
-    let at = timeline.at;
+    let at = timeline.at ? timeline.at : Date.now();
     let end = timeline.end;
     let start = timeline.start;
 
-    let timelinePoint;
     let passed = point.date <= at;
 
     let totalAnimationTime = 2;
@@ -37,7 +36,6 @@
             passed,
             date: point.date,
             collapse() {
-                console.log("here2");
                 expanded = false;
             }
         });
@@ -119,7 +117,7 @@
         font-family: monospace;
         font-style: normal;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 19px;
 
         color: white;
 
