@@ -1,12 +1,15 @@
 
 <script>
+    import IoIosArrowForward from 'svelte-icons/io/IoIosArrowForward.svelte'
     let expanded = false;
 </script>
 
 <div class="setion">
     <div class={"header " + (expanded ? "expanded" : "")} on:click={() => expanded = !expanded}>
         <slot name="header"></slot>
-        <span>></span>
+        <div class="mid-icon">
+            <IoIosArrowForward />
+        </div>
     </div>
     {#if expanded}
         <hr>
@@ -23,10 +26,15 @@
         margin: 0;
     }
 
-    span {
-        font-size: 30px;
-        font-weight: bold;
-        transition: rotation 0.4s;
+    .mid-icon {
+        display: flex;
+        align-items: center;
+        transform: rotate(90deg);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .expanded > .mid-icon {
+        transform: rotate(0deg);
     }
 
     .section {

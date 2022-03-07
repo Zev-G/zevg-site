@@ -102,4 +102,8 @@
     :global(.subtitle) {
         color: rgb(197, 197, 197);
     }
+
+    :global(.mid-icon) {
+        width: 25px;
+    }
 </style>
