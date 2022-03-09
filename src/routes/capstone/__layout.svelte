@@ -26,6 +26,8 @@
         --alt-text: rgb(233, 233, 233);
         --main-text: white;
 
+        --between-color: rgb(139, 148, 158);
+
         --item-bg: #25262E;
         --sub-item-bg: #30323d;
         --sub2-item-bg:rgb(69, 72, 85);
@@ -63,13 +65,16 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     }
 
-    :global(.page-title, .subtitle) {
+    :global(.page-title, .subtitle, .page-title-s) {
         margin-top: 0.1em;
         margin-bottom: 0.2em;
     }
 
     :global(.page-title) {
         font-size: 80px;
+    }
+    :global(.page-title-s) {
+        font-size: 60px;
     }
     :global(.subtitle) {
         font-size: 35px;
@@ -105,5 +110,8 @@
 
     :global(.mid-icon) {
         width: 25px;
+    }
+    :global(.ml-icon) {
+        width: 30px;
     }
 </style>

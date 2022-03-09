@@ -40,17 +40,20 @@ export const timeline = {
         {
             date: Date.parse("Feb 26 2022"),
             preview: "Create landing page",
-            content: "The first step towards completing my Capstone Project and answering my Capstone Question is to create a good landing page for the project. That's the website you're currently on! This website will receive updates over time but the basic version is complete as of February 26th 2022."
+            content: "The first step towards completing my Capstone Project and answering my Capstone Question is to create a good landing page for the project. That's the website you're currently on! This website will receive updates over time but the basic version is complete as of February 26th 2022.",
+            viewMore: true
         },
         {
             date: Date.parse("Mar 20 2022"),
             preview: "Make a Chess Site",
-            content: "I've already created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, allow games to be loaded from FENs, and look decent."
+            content: "I've already created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, allow games to be loaded from FENs, and look decent.",
+            viewMore: true
         },
         {
             date: Date.parse("Jun 1 2022"),
             preview: "Get ready for next year",
-            content: "Decide what my future goals are for my grade 12 year and document them in a timeline similar to this one."
+            content: "Decide what my future goals are for my grade 12 year and document them in a timeline similar to this one.",
+            viewMore: true
         }
     ]
 }

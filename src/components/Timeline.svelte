@@ -112,18 +112,18 @@
             </div>
         </div>
         <div class="points">
-            {#each points as point}
+            {#each points as point, i}
                 <div class="point" style={"top: " + (calcPoint(point.date) - 16) + "px;"}>
                     {#if point === originallyExpanded}
-                        <TimelinePoint beginExpanded={true} point={point} timeline={timeline} on:expanded={setExpandedPoint}/>
+                        <TimelinePoint beginExpanded={true} point={point} timeline={timeline} on:expanded={setExpandedPoint} index={i}/>
                     {:else}
-                        <TimelinePoint point={point} timeline={timeline} on:expanded={setExpandedPoint}/>
+                        <TimelinePoint point={point} timeline={timeline} on:expanded={setExpandedPoint} index={i}/>
                     {/if}
                 </div>
             {/each}
         </div>
         {#if expandedPoint !== null && matches}
-            <DetailedTimelineEntry preview={expandedPoint.preview} content={expandedPoint.content} passed={expandedPoint.passed} date={expandedPoint.date} />
+            <DetailedTimelineEntry {...expandedPoint} />
         {/if}
     </div>
 </div>
@@ -154,7 +154,6 @@
     }
     .point {
         position: absolute;
-        width: 100%;
     }
 
     .timeline {

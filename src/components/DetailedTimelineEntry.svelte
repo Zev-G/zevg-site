@@ -6,6 +6,7 @@
     export let content;
     export let passed;
     export let date;
+    export let index;
 
     export let viewMore = false;
 </script>
@@ -22,7 +23,7 @@
             <hr>
             <p>{content}</p>
             {#if viewMore}
-                <SeeMore href="/capstone/timeline/">
+                <SeeMore href={`/capstone/timeline/${index}`}>
                     View progress
                 </SeeMore>
             {/if}
@@ -34,6 +35,9 @@
 
     .content > :global(.see-more) {
         font-size: 20px;
+    }
+    .content :global(.inner) {
+        background-color: var(--alt-bg);
     }
 
     .content {

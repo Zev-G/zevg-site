@@ -6,6 +6,7 @@
 
     export let point;
     export let timeline;
+    export let index;
     export let expanded = false;
     export let beginExpanded = false;
 
@@ -34,7 +35,9 @@
             preview: point.preview,
             content: point.content,
             passed,
+            index,
             date: point.date,
+            viewMore: point.viewMore,
             collapse() {
                 expanded = false;
             }
@@ -88,10 +91,6 @@
     .timeline-point {
         display: flex;
         align-items: center;
-        width: 100%;
-    }
-    .timeline-point-top {
-        width: 100%;
     }
 
     @media (min-width: 1050px) {
