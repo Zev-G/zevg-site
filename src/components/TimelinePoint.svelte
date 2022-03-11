@@ -14,30 +14,25 @@
     let end = timeline.end;
     let start = timeline.start;
 
-    let passed = point.date <= at;
+    let passed = point.start <= at;
 
     let totalAnimationTime = 2;
 
-    function calcDelay() {
-        return totalAnimationTime * ((point.date - start) / (Math.min(at, end) - start));
-    }
+    let delay = totalAnimationTime * ((point.start - start) / (Math.min(at, end) - start));
 
     if (beginExpanded) {
         setTimeout(() => {
             toggleExpanded();
-        }, calcDelay() * 1000);
+        }, delay * 1000);
     }
 
     function toggleExpanded() {
         expanded = !expanded;
         dispatch("expanded", {
             expanded,
-            preview: point.preview,
-            content: point.content,
+            point,
             passed,
             index,
-            date: point.date,
-            viewMore: point.viewMore,
             collapse() {
                 expanded = false;
             }
@@ -52,17 +47,17 @@
 
 <div 
     class={(passed ? "at" : "not-at") + " timeline-point-top"}
-    style={"--delay: " + calcDelay() + "s;"}
+    style={"--delay: " + delay + "s;"}
 >
     <div class="date">
-        <DateView date={point.date} />
+        <DateView date={point.start} />
     </div>
     <div class={"timeline-point " + (expanded ? "expanded" : "")}>
         <svg>
             <path d="M 0 0 l 150 0" />
         </svg>
         <div on:click={tryToggleExpand}>
-            <div class="preview">{point.preview}</div>
+            <div class="preview">{point.name}</div>
         </div>
     </div>
 </div>

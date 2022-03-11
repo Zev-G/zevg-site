@@ -7,7 +7,9 @@
 
     export let timeline;
     
-    let at = timeline.at ? timeline.at : Date.now();
+    let at = 
+        //timeline.at ? timeline.at :
+        Date.now();
     let start = timeline.start;
     let end = timeline.end;
     let points = timeline.points;
@@ -68,7 +70,7 @@
     let originallyExpanded = null;
     if (points.length != 0) {
         for (let point of points) {
-            if (point.date <= at) originallyExpanded = point;
+            if (point.start <= at) originallyExpanded = point;
             else if (originallyExpanded == null) {
                 originallyExpanded = point;
                 break;
@@ -113,7 +115,7 @@
         </div>
         <div class="points">
             {#each points as point, i}
-                <div class="point" style={"top: " + (calcPoint(point.date) - 16) + "px;"}>
+                <div class="point" style={"top: " + (calcPoint(point.start) - 16) + "px;"}>
                     {#if point === originallyExpanded}
                         <TimelinePoint beginExpanded={true} point={point} timeline={timeline} on:expanded={setExpandedPoint} index={i}/>
                     {:else}

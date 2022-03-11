@@ -25,14 +25,14 @@
                     <li class={i == id ? "selected" : ""}>
                         <a href={`/capstone/timeline/${i}`} on:click={() => showPagesNav = false}>
                             <div class="hyperlink-content">
-                                {point.preview}
+                                {point.name}
                             </div>
                         </a>
                     </li>
                 {/each}
             </ul>
         </PagesNav>
-        <h1 class="page-title-s">{timeline.points[id].preview}</h1>
+        <h1 class="page-title-s">{timeline.points[id].name}</h1>
     </div>
 </div>
 

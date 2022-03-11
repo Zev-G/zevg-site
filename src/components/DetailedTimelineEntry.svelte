@@ -2,26 +2,25 @@
     import DateView from "./DateView.svelte";
     import SeeMore from "./SeeMore.svelte";
 
-    export let preview;
-    export let content;
+    export let point;
     export let passed;
-    export let date;
     export let index;
 
-    export let viewMore = false;
+    console.log(point.points.length);
+    $: viewMore = point.points.length > 0;
 </script>
 
 <div class={"detailed-entry " + (passed ? "passed" : "")}>
     <div class="wrapper">
         <div class="content">
             <div class="header">
-                <h1>{preview}</h1>
+                <h1>{point.name}</h1>
                 <div class="date-view">
-                    <DateView date={date} />
+                    <DateView date={point.start} />
                 </div>
             </div>
             <hr>
-            <p>{content}</p>
+            <p>{point.explanation}</p>
             {#if viewMore}
                 <SeeMore href={`/capstone/timeline/${index}`}>
                     View progress
