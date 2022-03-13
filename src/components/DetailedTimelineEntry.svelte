@@ -3,10 +3,11 @@
     import SeeMore from "./SeeMore.svelte";
 
     export let point;
-    export let passed;
-    export let index;
+    export let timeline;
 
-    console.log(point.points.length);
+    $: passed = point.start <= (timeline.at ? timeline.at : Date.now());
+    $: index = timeline.points.indexOf(point);
+
     $: viewMore = point.points.length > 0;
 </script>
 
@@ -47,6 +48,7 @@
         margin: 5% 0;
         padding: 0 2% 2% 2%;
         border-radius: 25px;
+        text-align: center;
     }
 
     .detailed-entry {

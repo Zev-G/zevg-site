@@ -6,13 +6,27 @@
     import TimelinePoint from "./TimelinePoint.svelte";
 
     export let timeline;
+    let ogTimeline = timeline;
+    let animateIn = true;
+
+    $: animateIn = animateIn && ogTimeline === timeline;
+
+    let animating = animateIn;
+    if (animateIn) {
+        onMount(() => {
+            let lastPointDate = getLastPoint().start;
+            let delay = 2 * (lastPointDate - start) / (Math.min(at, end) - start);
+            setTimeout(() => animating = false, delay * 1000);
+        });
+    }
     
     let at = 
         //timeline.at ? timeline.at :
         Date.now();
-    let start = timeline.start;
-    let end = timeline.end;
-    let points = timeline.points;
+    
+    $: start = timeline.start;
+    $: end = timeline.end;
+    $: points = timeline.points;
 
     // Media Query
     let query = "(min-width: 1050px)";
@@ -48,45 +62,58 @@
     }
 
     let size = 700;
-    let filled = Math.min(1, (at - start) / (end - start));
+    $: filled = Math.min(1, (at - start) / (end - start));
+    $: showDateMarker = filled !== 1;
 
     function calcPoint(date) {
         return Math.round(size * Math.min(1, (date - start) / (end - start)));
     }
 
-    let expandedPoint = null;
+    // Should find a fix to doing this at some point.
+    $: dateYPos = "top: " + Math.round(size * Math.min(1, (at - start) / (end - start))) + "px;";
+
+    let expandedPoints = new Map();
+    $: expandedPoint = expandedPoints.get(timeline);
+    $: {
+        if (!expandedPoints.has(timeline)) {
+            expandedPoint = getLastPoint();
+            expandedPoints.set(timeline, expandedPoint);
+        }
+    }
 
     function setExpandedPoint(point) {
-        if (expandedPoint !== null) {
-            expandedPoint.collapse();
-        }
         if (point !== null && point.detail.expanded) {
-            expandedPoint = point.detail;
+            expandedPoint = point.detail.point;
+            expandedPoints.set(timeline, expandedPoint);
         } else {
             expandedPoint = null;
+            expandedPoints.set(timeline, null);
         }
     }
 
-    let originallyExpanded = null;
-    if (points.length != 0) {
-        for (let point of points) {
-            if (point.start <= at) originallyExpanded = point;
-            else if (originallyExpanded == null) {
-                originallyExpanded = point;
-                break;
+
+    function getLastPoint() {
+        let originallyExpanded = null;
+        if (points.length != 0) {
+            for (let point of points) {
+                if (point.start <= at) originallyExpanded = point;
+                else if (originallyExpanded == null) {
+                    originallyExpanded = point;
+                    break;
+                }
             }
         }
+        return originallyExpanded;
     }
+    
 </script>
 
 <div class="timeline-wrapper">
-    {#if filled !== 1}
-        <div style="position: absolute;">
-            <div class="date-marker " style={"top: " + (calcPoint(at)) + "px;"}>
-                <DateView date={at} showYear={false} />
-            </div>
+    <div style={"position: absolute" + (showDateMarker ? "" : "; visibility: hidden;")}>
+        <div class="date-marker " style={dateYPos}>
+            <DateView date={at} showYear={false} />
         </div>
-    {/if}
+    </div>
     <div class="timeline" style={"--size: " + size + "px;"}>
         <svg class="timeline-svg">
     
@@ -101,9 +128,7 @@
             <rect class="total" x="27.5" y="10" width="25" height={size - 25} />
             <rect class="filled" x="27.5" y="10" width="25" style={"--filled: " + (size * filled) + "px;"} />
             <rect class="end" width="80" height="15" y={size - 15} />
-            {#if filled === 1}
-                <rect class="end-filled" width="80" y={size - 15} />
-            {/if}
+            <rect class="end-filled" width="80" y={size - 15} style={showDateMarker ? "visibility: hidden;" : ""} />
         </svg>
         <div class="main-dates">
             <div class="start-date">
@@ -114,18 +139,14 @@
             </div>
         </div>
         <div class="points">
-            {#each points as point, i}
+            {#each points as point}
                 <div class="point" style={"top: " + (calcPoint(point.start) - 16) + "px;"}>
-                    {#if point === originallyExpanded}
-                        <TimelinePoint beginExpanded={true} point={point} timeline={timeline} on:expanded={setExpandedPoint} index={i}/>
-                    {:else}
-                        <TimelinePoint point={point} timeline={timeline} on:expanded={setExpandedPoint} index={i}/>
-                    {/if}
+                    <TimelinePoint animateIn={animateIn} bind:expandedPoint={expandedPoint} point={point} timeline={timeline} on:expanded={setExpandedPoint}/>
                 </div>
             {/each}
         </div>
-        {#if expandedPoint !== null && matches}
-            <DetailedTimelineEntry {...expandedPoint} />
+        {#if expandedPoint && matches && !animating}
+            <DetailedTimelineEntry point={expandedPoint} timeline={timeline} />
         {/if}
     </div>
 </div>

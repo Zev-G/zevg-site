@@ -1,46 +1,46 @@
 <script>
     import DateView from "./DateView.svelte";
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher, onMount } from 'svelte';
 
     const dispatch = createEventDispatcher();
 
     export let point;
     export let timeline;
-    export let index;
-    export let expanded = false;
-    export let beginExpanded = false;
+    export let animateIn = true;
+    export let expandedPoint;
 
-    let at = timeline.at ? timeline.at : Date.now();
-    let end = timeline.end;
-    let start = timeline.start;
+    $: expanded = expandedPoint === point;
 
-    let passed = point.start <= at;
+    $: at = timeline.at ? timeline.at : Date.now();
+    $: end = timeline.end;
+    $: start = timeline.start;
+
+    $: passed = point.start <= at;
 
     let totalAnimationTime = 2;
 
-    let delay = totalAnimationTime * ((point.start - start) / (Math.min(at, end) - start));
+    $: delay = animateIn ? totalAnimationTime * ((point.start - start) / (Math.min(at, end) - start)) : 0;
 
-    if (beginExpanded) {
-        setTimeout(() => {
-            toggleExpanded();
-        }, delay * 1000);
-    }
-
-    function toggleExpanded() {
-        expanded = !expanded;
-        dispatch("expanded", {
-            expanded,
-            point,
-            passed,
-            index,
-            collapse() {
-                expanded = false;
-            }
+    let animating = animateIn;
+    if (animating) {
+        onMount(() => {
+            setTimeout(() => animating = false, delay * 1000);
         });
     }
+
+    function sendExpandedEvent() {
+        if (point !== expandedPoint) {
+            dispatch("expanded", {
+                expanded,
+                point
+            });
+        }
+    }
+
     function tryToggleExpand() {
         if (window.matchMedia("(min-width: 1050px)").matches) {
-            toggleExpanded();
+            expanded = !expanded;
+            sendExpandedEvent();
         }
     }
 </script>
@@ -52,7 +52,7 @@
     <div class="date">
         <DateView date={point.start} />
     </div>
-    <div class={"timeline-point " + (expanded ? "expanded" : "")}>
+    <div class={"timeline-point " + ((expanded && !animating) ? "expanded" : "")}>
         <svg>
             <path d="M 0 0 l 150 0" />
         </svg>
