@@ -15,9 +15,6 @@
     import Timeline from "../../../components/Timeline.svelte";
     import EntrySection from "../../../components/capstone/projects/EntrySection.svelte";
 
-    import { java } from "svelte-highlight/src/languages";
-    import Code from "../../../components/Code.svelte";
-
     export let id;
 
     let displayedTimeline = findTimelineMatchingDate(Date.now());
@@ -90,7 +87,7 @@
     }
 
     .hyperlink-content {
-        padding: 0.5em 0.5em 0.5em 1em;
+        padding: 0.5em 1em 0.5em 1em;
         border-radius: 5px;
         cursor: pointer;
     }

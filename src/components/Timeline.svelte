@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { fade } from "svelte/transition";
 
     import DateView from "./DateView.svelte";
     import DetailedTimelineEntry from "./DetailedTimelineEntry.svelte";
@@ -8,34 +9,29 @@
     export let timeline;
     export let readFullEntries = false;
 
+    let start = timeline.start;
+    let end = timeline.end;
+    let points = timeline.points;
+    let at = Date.now();
+    $: start = timeline.start;
+    $: end = timeline.end;
+    $: points = timeline.points;
+
     let ogTimeline = timeline;
     let animateIn = true;
 
     $: animateIn = animateIn && ogTimeline === timeline;
-
-    let animating = animateIn;
-    if (animateIn) {
-        onMount(() => {
-            let lastPointDate = getLastPoint().start;
-            let delay = 2 * (lastPointDate - start) / (Math.min(at, end) - start);
-            setTimeout(() => animating = false, delay * 1000);
-        });
-    }
-    
-    let at = 
-        //timeline.at ? timeline.at :
-        Date.now();
-    
-    $: start = timeline.start;
-    $: end = timeline.end;
-    $: points = timeline.points;
+    let lastPointDate = getLastPoint().start;
+    let animationTime = 1.5 * (lastPointDate - start) / (Math.min(at, end) - start) * 1000;
+    let animationDone = false;
+    setTimeout(() => animationDone = true, animationTime);
 
     // Media Query
     let query = "(min-width: 1050px)";
     let mql;
     let mqlListener;
     let wasMounted;
-    let matches;
+    let matches = true;
 
     onMount(() => {
         wasMounted = true;
@@ -130,7 +126,7 @@
             <rect class="total" x="27.5" y="10" width="25" height={size - 25} />
             <rect class="filled" x="27.5" y="10" width="25" style={"--filled: " + (size * filled) + "px;"} />
             <rect class="end" width="80" height="15" y={size - 15} />
-            <rect class="end-filled" width="80" y={size - 15} style={showDateMarker ? "visibility: hidden;" : ""} />
+            <rect class="end-filled" width="80" y={size - 15} style={showDateMarker ? "opacity: 0;" : "opacity: 1;"} />
         </svg>
         <div class="main-dates">
             <div class="start-date">
@@ -147,8 +143,10 @@
                 </div>
             {/each}
         </div>
-        {#if expandedPoint && matches && !animating}
-            <DetailedTimelineEntry on:goToEntry linkFullRead={readFullEntries} point={expandedPoint} timeline={timeline} />
+        {#if animationDone && expandedPoint && matches}
+            <div class="entry-wrapper" transition:fade={{duration: 250}}>
+                <DetailedTimelineEntry on:goToEntry linkFullRead={readFullEntries} point={expandedPoint} timeline={timeline} />
+            </div>
         {/if}
     </div>
 </div>
@@ -156,6 +154,12 @@
 <style>
     :global(*) {
         --tl-animation-length: 2s;
+    }
+
+    .entry-wrapper {
+        width: 80%;
+        display: flex;
+        justify-content: right;
     }
 
     .points {
@@ -202,6 +206,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
     }
 
     .total, .end {
@@ -221,10 +226,12 @@
     .filled {
         animation: fill var(--tl-animation-length) ease-in-out;
         height: var(--filled);
+        transition: height 0.5s;
     }
     .end-filled {
         animation: 0.2s fill-end calc(var(--tl-animation-length) - 0.3s);
         animation-fill-mode: forwards;
+        transition: opacity 0.4s;
     }
 
     @keyframes load-at-mark {

@@ -24,12 +24,13 @@
     let animating = animateIn;
     if (animating) {
         onMount(() => {
-            setTimeout(() => animating = false, delay * 1000);
+            setTimeout(() => animating = false, delay * 1000 / 1.5);
         });
     }
 
     function sendExpandedEvent() {
-        if (point !== expandedPoint) {
+        if (point !== expandedPoint || !expanded) {
+            console.log("Dispatching " + expanded);
             dispatch("expanded", {
                 expanded,
                 point

@@ -7,6 +7,7 @@ import InitialPageEntry from "./projects/landing-page/InitialPageEntry.svelte";
 import JustGettingStarted from "./projects/landing-page/JustGettingStartedEntry.svelte";
 import SiteStructureEntry from "./projects/landing-page/SiteStructureEntry.svelte";
 import FinishingLandingPageEntry from "./projects/landing-page/FinishingLandingPageEntry.svelte";
+import SwitchToSvelteKitEntry from "./projects/landing-page/SwitchToSvelteKitEntry.svelte";
 
 export const qnas = [
     {
@@ -60,7 +61,7 @@ const website = new ProjectElement(Date.parse("Feb 26 2022"), Date.parse("June 2
         new ProjectElement(
             Date.parse("Mar 1 2022"), Date.parse("Mar 8 2022"), "Capstone Proposal",
             "This version of the site includes everything from the previous version as well as a page putting forth my Capstone Proposal. This site should have a back button to return to the Capstone home page, my Inquiry Question, and answers to a series of questions.", [
-                projectElem("Mar 2 2022", "Switch to SvelteKit", "Up until this point in the project I've been using vanilla Svelte, the downside to this is that it only supports single page websites. To add a Capstone Proposal page to my site I need to make my project support multiple pages. This is done using SvelteKit which requires creating a fresh project and importing my old code."),
+                projectElem("Mar 2 2022", "Switch to SvelteKit", "Up until this point in the project I've been using vanilla Svelte, the downside to this is that it only supports single page websites. To add a Capstone Proposal page to my site I need to make my project support multiple pages. This is done using SvelteKit which requires creating a fresh project and importing my old code.", SwitchToSvelteKitEntry),
                 projectElem("Mar 4 2022", "Design page", "Before I can answer my Capstone Proposal questions I need to find a format to answer the questions in. I don't want to overwhelm the user with all the answers to all the questions, so I need to create a way of sectioning off specific questions and their answers."),
                 projectElem("Mar 7 2022", "Answering the questions", "This is the most straightforward step. I just need to write up answers to all the Capstone Proposal questions in the assignment and add them to my Capstone Proposal page.")
             ]

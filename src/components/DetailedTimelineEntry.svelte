@@ -71,10 +71,10 @@
     }
 
     .detailed-entry {
-        width: 80%;
+        width: 100%;
         color: white;
 
-        animation: fadeIn 0.5s;
+        /* animation: fadeIn 0.5s; */
     }
 
     .date-view {

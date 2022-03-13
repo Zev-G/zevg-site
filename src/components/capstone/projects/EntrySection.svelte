@@ -25,7 +25,9 @@
             await tick();
             entries[entry.points.indexOf(path[0])].followPath(path);
         } else {
-            view.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            await tick();
+            const y = view.getBoundingClientRect().top + window.pageYOffset;
+            window.scrollTo({top: y - 50, behavior: 'smooth'});
             highlighted = true;
             setTimeout(() => highlighted = false, 1500);
         }
@@ -45,9 +47,9 @@
 
 </script>
 
-<div class={"entry-section" + (highlighted ? " highlighted" : "")} bind:this={view}>
+<div class={"entry-section" + (highlighted ? " highlighted" : "")}>
     <Section bind:expanded={expanded}>
-        <h1 slot="header" style={"--depth: " + depth + ";"}>{entry.name}</h1>
+        <h1 bind:this={view} slot="header" style={"--depth: " + depth + ";"}>{entry.name}</h1>
         <div slot="content" class="items">
             <svelte:component this={entry.detailedView} entry={entry}/>
             {#each entry.points as loopEntry, i}
