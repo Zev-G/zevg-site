@@ -5,7 +5,8 @@ import ProjectElement from "./ProjectElement";
 import SimpleEntry from "./projects/SimpleEntry.svelte";
 import InitialPageEntry from "./projects/landing-page/InitialPageEntry.svelte";
 import JustGettingStarted from "./projects/landing-page/JustGettingStartedEntry.svelte";
-import SiteStructure from "./projects/landing-page/SiteStructure.svelte";
+import SiteStructureEntry from "./projects/landing-page/SiteStructureEntry.svelte";
+import FinishingLandingPageEntry from "./projects/landing-page/FinishingLandingPageEntry.svelte";
 
 export const qnas = [
     {
@@ -52,8 +53,8 @@ const website = new ProjectElement(Date.parse("Feb 26 2022"), Date.parse("June 2
             Date.parse("Feb 26 2022"), Date.parse("Mar 1 2022"), "Initial page",
             "This is the original version of the page, it has one page. This page has a timeline documenting some important goals of the project. Farther down on the page is the Capstone Inquiry Question, later a link to the Capstone Proposal will be linked here. At the bottom of the page is a simple QNA about the site.", [
                 projectElem("Feb 26 10:00 2022", "Just getting started", "The very first version of my Capstone Page. All it needs to include is a title. Most of the work going into this version is setup. I need to choose a UI Framework, hosting, routing, and other important behind the scenes decisions.", JustGettingStarted),
-                projectElem("Feb 27 2022", "Giving the site structure", "This version of the original page is populated with it's basic functionalities. It contains a title, a simple timeline, my Capstone Inquiry Question, and a QnA about how the site is made at the bottom. The key elements of this page will later serve as navigation to other elements of the site.", SiteStructure),
-                projectElem("Feb 28 2022", "Finish the landing page", "The finished (version 1) langing page. This contains all the features of the previous landing page but supports mobile, has animations, and a cleaner code base. Under the hood a lot of work has gone into making the code more reusable, and visually the site has received lots of improvements.")
+                projectElem("Feb 27 2022", "Giving the site structure", "This version of the original page is populated with it's basic functionalities. It contains a title, a simple timeline, my Capstone Inquiry Question, and a QnA about how the site is made at the bottom. The key elements of this page will later serve as navigation to other elements of the site.", SiteStructureEntry),
+                projectElem("Feb 28 2022", "Finish the landing page", "The finished (version 1) langing page. This contains all the features of the previous landing page but supports mobile, has animations, and a cleaner code base. Under the hood a lot of work has gone into making the code more reusable, and visually the site has received lots of improvements.", FinishingLandingPageEntry)
             ], InitialPageEntry
         ),
         new ProjectElement(
