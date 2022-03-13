@@ -48,13 +48,15 @@
             <PagesNav bind:showing={showPagesNav}>
                 <ul>
                     {#each timeline.points as point, i}
-                        <li class={i == id ? "selected" : ""}>
-                            <a href={`/capstone/timeline/${i}`} on:click={() => showPagesNav = false}>
-                                <div class="hyperlink-content">
-                                    {point.name}
-                                </div>
-                            </a>
-                        </li>
+                        {#if point.points.length > 0}
+                            <li class={i == id ? "selected" : ""}>
+                                <a href={`/capstone/timeline/${i}`} on:click={() => showPagesNav = false}>
+                                    <div class="hyperlink-content">
+                                        {point.name}
+                                    </div>
+                                </a>
+                            </li>
+                        {/if}        
                     {/each}
                 </ul>
             </PagesNav>

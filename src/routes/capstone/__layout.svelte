@@ -42,6 +42,10 @@
         --alt-accent: #b467fd;
     }
 
+    :global(a) {
+        color: var(--main-accent);
+    }
+
     :global(body::-webkit-scrollbar) {
         width: 0.5em;
     }
