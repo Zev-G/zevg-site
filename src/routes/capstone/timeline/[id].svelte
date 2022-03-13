@@ -13,10 +13,15 @@
     import { timeline } from "../../../components/capstone/data";
     import Timelines from "../../../components/Timelines.svelte";
     import Timeline from "../../../components/Timeline.svelte";
+    import EntrySection from "../../../components/capstone/projects/EntrySection.svelte";
+
+    import { java } from "svelte-highlight/src/languages";
+    import Code from "../../../components/Code.svelte";
 
     export let id;
 
     let displayedTimeline = findTimelineMatchingDate(Date.now());
+    let rootFullEntry;
 
     $: pageTimeline = timeline.points[id];
 
@@ -30,6 +35,10 @@
             if (date <= tl.start) return tl;
         }
         return timelines[timelines.length - 1];
+    }
+
+    function goToEntry(entry) {
+        rootFullEntry.expandEntry(entry, true);
     }
 </script>
 
@@ -56,7 +65,9 @@
         </div>
     </div>
     <hr>
-    <Timeline timeline={displayedTimeline}/>
+    <Timeline timeline={displayedTimeline} readFullEntries={true} on:goToEntry={(event) => goToEntry(event.detail.point)}/>
+    <hr>
+    <EntrySection bind:this={rootFullEntry} entry={pageTimeline} expanded={true}/>
 </div>
 
 <style>

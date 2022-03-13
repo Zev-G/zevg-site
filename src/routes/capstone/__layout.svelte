@@ -23,6 +23,10 @@
         --alt2-bg: rgb(31, 31, 39);
         --alt3-bg: rgb(35, 35, 44);
 
+        --light-tint: rgba(69, 72, 85, 0.05);
+        --main-accent-tint: rgba(103, 145, 253, 0.3);
+        --alt-accent-tint: rgba(180, 103, 253, 0.3);
+
         --alt-text: rgb(233, 233, 233);
         --main-text: white;
 
@@ -63,6 +67,11 @@
         padding: 0;
         box-sizing: border-box;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    }
+
+    :global(code) {
+        background-color: transparent !important;
+        font-size: 16px;
     }
 
     :global(.page-title, .subtitle, .page-title-s) {

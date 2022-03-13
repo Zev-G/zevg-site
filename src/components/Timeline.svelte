@@ -6,6 +6,8 @@
     import TimelinePoint from "./TimelinePoint.svelte";
 
     export let timeline;
+    export let readFullEntries = false;
+
     let ogTimeline = timeline;
     let animateIn = true;
 
@@ -146,7 +148,7 @@
             {/each}
         </div>
         {#if expandedPoint && matches && !animating}
-            <DetailedTimelineEntry point={expandedPoint} timeline={timeline} />
+            <DetailedTimelineEntry on:goToEntry linkFullRead={readFullEntries} point={expandedPoint} timeline={timeline} />
         {/if}
     </div>
 </div>
@@ -177,6 +179,7 @@
     }
     .point {
         position: absolute;
+        transition: top 0.3s ease-in-out;
     }
 
     .timeline {

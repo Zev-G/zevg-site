@@ -1,7 +1,7 @@
 
 <script>
     import IoIosArrowForward from 'svelte-icons/io/IoIosArrowForward.svelte'
-    let expanded = false;
+    export let expanded = false;
 </script>
 
 <div class="setion">
@@ -29,12 +29,12 @@
     .mid-icon {
         display: flex;
         align-items: center;
-        transform: rotate(90deg);
+        transform: rotate(0deg);
         transition: transform 0.3s ease-in-out;
     }
 
     .expanded > .mid-icon {
-        transform: rotate(0deg);
+        transform: rotate(90deg);
     }
 
     .section {

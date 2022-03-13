@@ -1,14 +1,27 @@
 <script>
+    import { createEventDispatcher } from "svelte";
+
     import DateView from "./DateView.svelte";
     import SeeMore from "./SeeMore.svelte";
+    
+    const dispatch = createEventDispatcher();
 
     export let point;
     export let timeline;
+
+    export let linkFullRead = false;
 
     $: passed = point.start <= (timeline.at ? timeline.at : Date.now());
     $: index = timeline.points.indexOf(point);
 
     $: viewMore = point.points.length > 0;
+
+    function readFullEntry() {
+        dispatch(
+            "goToEntry",
+            { point }
+        );
+    }
 </script>
 
 <div class={"detailed-entry " + (passed ? "passed" : "")}>
@@ -26,6 +39,12 @@
                 <SeeMore href={`/capstone/timeline/${index}`}>
                     View progress
                 </SeeMore>
+            {:else if linkFullRead}
+                <div on:click={readFullEntry}>
+                    <SeeMore >
+                        Read full entry
+                    </SeeMore>
+                </div>
             {/if}
         </div>
     </div>
