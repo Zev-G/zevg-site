@@ -10,4 +10,13 @@
     {@html githubDark}
 </svelte:head>
 
-<Highlight {language} {code} />
+<div>
+    <Highlight {language} {code} />
+</div>
+
+<style>
+    div {
+        background-color: var(--alt2-bg);
+        border-radius: 10px;
+    }
+</style>

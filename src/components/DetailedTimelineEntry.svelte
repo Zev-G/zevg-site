@@ -73,15 +73,11 @@
     .detailed-entry {
         width: 100%;
         color: white;
-
-        /* animation: fadeIn 0.5s; */
     }
 
     .date-view {
         text-align: left;
         position: relative;
-        /* top: 20px; */
-        /* left: 20px; */
     }
 
     .wrapper {
@@ -98,7 +94,6 @@
         border: none;
         height: 3px;
         background: linear-gradient(to right, var(--main-accent), var(--alt-accent));
-        /* opacity: 0.5; */
     }
 
     p {
