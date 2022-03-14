@@ -1,5 +1,5 @@
 <script>
-    import { Highlight } from "svelte-highlight";
+    import { Highlight, HighlightSvelte } from "svelte-highlight";
     import { githubDark } from "svelte-highlight/src/styles";
 
     export let language;
@@ -18,7 +18,11 @@
             <hr>
         </div>
     {/if}
+    {#if language === "svelte"}
+        <HighlightSvelte {code} />
+    {:else}
     <Highlight {language} {code} />
+    {/if}
 </div>
 
 <style>

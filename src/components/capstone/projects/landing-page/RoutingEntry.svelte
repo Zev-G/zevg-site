@@ -1,5 +1,5 @@
 <script>
-    import { javascript, xml } from "svelte-highlight/src/languages";
+    import { javascript } from "svelte-highlight/src/languages";
     import Code from "../../../../components/Code.svelte";
     
     export let entry;
@@ -10,7 +10,7 @@
     <p>
         Loading a page dynamically via its URL is made easy by SvelteKit. All I need to do is add a script to the module context of a file named <i>[id].svelte</i>.
     </p>
-    <Code language={xml} fileName="[id].svelte" code={
+    <Code language="svelte" fileName="[id].svelte" code={
 `<script context="module">
     export async function load({params, props}) {
         return {

@@ -1,6 +1,5 @@
 <script>
     import Code from "../../../Code.svelte";
-    import { xml } from "svelte-highlight/src/languages";
 
     export let entry;
 
@@ -49,11 +48,11 @@
     <p>
         To do this we create <strong>Sections</strong>. Each section has a header and content. This content can be expanded, but is minimized by default so the user isn't overwhelmed with content.
     </p>
-    <Code fileName="Section.svelte" language={xml} code={ogSectionCode}/>
+    <Code fileName="Section.svelte" language="svelte" code={ogSectionCode}/>
     <p>
         This works but I thought it would be nice to add an icon showing if the Section was expanded or not. To do this I added the <a href="https://github.com/Introvertuous/svelte-icons">svelte-icons</a> library to my project. This made the process super simple.
     </p>
-    <Code fileName="Section.svelte" language={xml} code={finalSectionCode}/>
+    <Code fileName="Section.svelte" language="svelte" code={finalSectionCode}/>
 </div>
 
 <style>
