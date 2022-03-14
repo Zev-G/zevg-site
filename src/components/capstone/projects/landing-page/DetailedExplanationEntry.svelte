@@ -1,4 +1,14 @@
 <script>
+    import Code from "../../../Code.svelte";
+
+    export let entry;
+</script>
+
+<div>
+    <p>{entry.explanation}</p>
+    <p>Most of the work that needs to be done for the explanations is just writing them, but I want to allow for code to be injected into the explanations. To do this I will use a <a href="https://github.com/metonym/svelte-highlight">Svelte port</a> for <a href="https://highlightjs.org/">highlight.js</a>.</p>
+    <Code language="svelte" fileName="Code.svelte" code={
+`<script>
     import { Highlight, HighlightSvelte } from "svelte-highlight";
     import { githubDark } from "svelte-highlight/src/styles";
 
@@ -25,28 +35,6 @@
     {/if}
 </div>
 
-<style>
-    div {
-        background-color: var(--alt2-bg);
-        border-radius: 10px;
-    }
-    h2 {
-        padding: 0.5em;
-        margin: 0;
-        font-size: 1.15em;
-        font-family: monospace;
-    }
-    hr {
-        margin: 0;
-        border: 2px solid var(--sub2-item-bg);
-    }
-
-    .header {
-        filter: drop-shadow(0 4px 2px var(--drop-shadow-color));
-        background-color: var(--alt3-bg);
-    }
-
-    .showing-header > :global(pre) {
-        margin-top: 0;
-    }
-</style>
+...`
+    } />
+</div>

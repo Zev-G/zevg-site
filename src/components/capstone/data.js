@@ -11,6 +11,8 @@ import SwitchToSvelteKitEntry from "./projects/landing-page/SwitchToSvelteKitEnt
 import DesignPageEntry from "./projects/landing-page/DesignPageEntry.svelte";
 import RoutingEntry from "./projects/landing-page/RoutingEntry.svelte";
 import NavigationEntry from "./projects/landing-page/NavigationEntry.svelte";
+import MultipleTimelinesEntry from "./projects/landing-page/MultipleTimelinesEntry.svelte";
+import DetailedExplanationEntry from "./projects/landing-page/DetailedExplanationEntry.svelte";
 
 export const qnas = [
     {
@@ -74,8 +76,8 @@ const website = new ProjectElement(Date.parse("Feb 26 2022"), Date.parse("June 2
             "This version of the site is meant to provide a more detailed explanation and documentation of my projects. Each page should contain navigation to switch to a different project. It should contain the project's timeline(s), and write-ups for each element of the timeline.", [
                 projectElem("Mar 10 2022", "Handle routing and data", "To host each project's page without hardcoding each one I need to dynamically create them based on the URL. To do this I wil need to use more advanced SvelteKit routing features. Another thing which needs to be changed is the way timeline data is structured. Currently there is no way to have a timeline entry (project) have it's own timeline, so lots of data refactoring needs to be done to make this possible.", RoutingEntry),
                 projectElem("Mar 12 2022", "Navigation between projects", "The first feature all of these project pages will need is the ability to easily switch which project's page you're currently on. To make this easy for the user I want to implement a button which will switch which project you're currently looking at.", NavigationEntry),
-                projectElem("Mar 14 2022", "Multiple timelines", "Each project can be broken into stages, and each of these stages should have its own timelines. This wasn't a feature I was initially planning on implementing, so almost all of the timeline code will need to be re-written to make this possible."),
-                projectElem("Mar 18 2022", "Detailed documentation", "Individual entries in a project's timeline provide a brief overview of that feature/goal, but lots of details aren't included since there's only so much you can fit in a paragraph. To give more detailed explanations I want each project page to include a series of sections explaing particular entries in more detail.")
+                projectElem("Mar 14 2022", "Multiple timelines", "Each project can be broken into stages, and each of these stages should have its own timelines. This wasn't a feature I was initially planning on implementing, so almost all of the timeline code will need to be re-written to make this possible.", MultipleTimelinesEntry),
+                projectElem("Mar 18 2022", "Detailed documentation", "Individual entries in a project's timeline provide a brief overview of that feature/goal, but lots of details aren't included since there's only so much you can fit in a paragraph. To give more detailed explanations I want each project page to include a series of sections explaining particular entries in more detail.", DetailedExplanationEntry)
             ]
         )
 ]);
