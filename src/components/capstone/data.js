@@ -9,6 +9,7 @@ import SiteStructureEntry from "./projects/landing-page/SiteStructureEntry.svelt
 import FinishingLandingPageEntry from "./projects/landing-page/FinishingLandingPageEntry.svelte";
 import SwitchToSvelteKitEntry from "./projects/landing-page/SwitchToSvelteKitEntry.svelte";
 import DesignPageEntry from "./projects/landing-page/DesignPageEntry.svelte";
+import RoutingEntry from "./projects/landing-page/RoutingEntry.svelte";
 
 export const qnas = [
     {
@@ -64,13 +65,13 @@ const website = new ProjectElement(Date.parse("Feb 26 2022"), Date.parse("June 2
             "This version of the site includes everything from the previous version as well as a page putting forth my Capstone Proposal. This site should have a back button to return to the Capstone home page, my Inquiry Question, and answers to a series of questions.", [
                 projectElem("Mar 2 2022", "Switch to SvelteKit", "Up until this point in the project I've been using vanilla Svelte, the downside to this is that it only supports single page websites. To add a Capstone Proposal page to my site I need to make my project support multiple pages. This is done using SvelteKit which requires creating a fresh project and importing my old code.", SwitchToSvelteKitEntry),
                 projectElem("Mar 4 2022", "Design page", "Before I can answer my Capstone Proposal questions I need to find a format to answer the questions in. I don't want to overwhelm the user with all the answers to all the questions, so I need to create a way of sectioning off specific questions and their answers.", DesignPageEntry),
-                projectElem("Mar 7 2022", "Answering the questions", "This is the most straightforward step. I just need to write up answers to all the Capstone Proposal questions in the assignment and add them to my Capstone Proposal page.")
+                projectElem("Mar 7 2022", "Answering the questions", "This was the most straightforward step. I just needed to write up answers to all the Capstone Proposal questions in the assignment and add them to my Capstone Proposal page.")
             ]
         ),
         new ProjectElement(
             Date.parse("Mar 8 2022"), Date.parse("Mar 22 2022"), "Projects page",
             "This version of the site is meant to provide a more detailed explanation and documentation of my projects. Each page should contain navigation to switch to a different project. It should contain the project's timeline(s), and write-ups for each element of the timeline.", [
-                projectElem("Mar 10 2022", "Handle routing and data", "To host each project's page without hardcoding each one I need to dynamically create them based on the URL. To do this I wil need to use more advanced SvelteKit routing features. Another thing which needs to be changed is the way timeline data is structured. Currently there is no way to have a timeline entry (project) have it's own timeline, so lots of data refactoring needs to be done to make this possible."),
+                projectElem("Mar 10 2022", "Handle routing and data", "To host each project's page without hardcoding each one I need to dynamically create them based on the URL. To do this I wil need to use more advanced SvelteKit routing features. Another thing which needs to be changed is the way timeline data is structured. Currently there is no way to have a timeline entry (project) have it's own timeline, so lots of data refactoring needs to be done to make this possible.", RoutingEntry),
                 projectElem("Mar 12 2022", "Navigation between projects", "The first feature all of these project pages will need is the ability to easily switch which project's page you're currently on. To make this easy for the user I want to implement a button which will switch which project you're currently looking at."),
                 projectElem("Mar 14 2022", "Multiple timelines", "Each project can be broken into stages, and each of these stages should have its own timelines. This wasn't a feature I was initially planning on implementing, so almost all of the timeline code will need to be re-written to make this possible."),
                 projectElem("Mar 18 2022", "Detailed documentation", "Individual entries in a project's timeline provide a brief overview of that feature/goal, but lots of details aren't included since there's only so much you can fit in a paragraph. To give more detailed explanations I want each project page to include a series of sections explaing particular entries in more detail.")

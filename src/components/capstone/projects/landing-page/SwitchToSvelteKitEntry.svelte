@@ -1,5 +1,5 @@
 <script>
-    import { css } from "svelte-highlight/src/languages";
+    import { css, plaintext } from "svelte-highlight/src/languages";
     import Code from "../../../../components/Code.svelte";
 
     export let entry;
@@ -9,9 +9,21 @@
 
 <div>
     <p>{entry.explanation}</p>
-    <p>Switching to SvelteKit also meant that I could no longer use Firebase for hosting. After looking at my options I decided to switch to Vercel for hosting. This also fixed the really long loading time for the website.</p>
-    <p>Lots of code needed to be refactored to properly make the switch. All my components needed to be moved into their own folder, and pages needed to be designed separately. One of the toughest parts of the switch was losing a global CSS file to put common styles in.</p>
-    <p>To keep the global CSS functionaliy I added global selectors to my layout component. Here's what this switch looked like:</p>
+    <p>
+        To switch to SvelteKit I need to set up a new SvelteKit project. This is pretty easy, I can just use a few command line commands.
+    </p>
+    <Code code={
+`npm init svelte@next zevg-site
+cd zevg-site
+npm install
+npm run dev -- --open`
+    } language={plaintext} fileName="command line" />
+    <p>
+        SvelteKit (like Svelte) is very well designed so setting up the routing is pretty straightforard after reading the <a href="https://kit.svelte.dev/docs/introduction">SvelteKit docs</a>. 
+    </p>
+    <p>Switching to SvelteKit means that I can no longer use Firebase for hosting. After looking at my options I'm deciding to switch to Vercel for hosting. This also fixes the really long loading time for the site.</p>
+    <p>Lots of code needs to be refactored to properly make this switch. All my components need to be moved into their own folder, and pages need to be designed separately. One of the toughest parts of this is losing a global CSS file to put common styles in.</p>
+    <p>To keep the global CSS functionaliy I can add global selectors to my layout component. Here's what this switch looks like:</p>
     <Code language={css} fileName="global.css" code={
 `body {
     color: var(--main-text);

@@ -34,6 +34,6 @@
 <div>
     <p>{entry.explanation}</p>
     <p>This version of the landing page is still being updated, but remains quite similiar to the current version, found <a href="/capstone">here</a>.</p>
-    <p>To make styling the project easier I began using global CSS variables. This requires a bit of a hack to accomplish in Svelte. With SvelteKit I add a global selector to my layout component's CSS which sets the variables.</p>
+    <p>To make styling the project easier I'm using global CSS variables. This requires a bit of a hack to be accomplished in Svelte. With SvelteKit I add a global selector to my layout component's CSS which sets the variables.</p>
     <Code language={css} {code} />
 </div>
