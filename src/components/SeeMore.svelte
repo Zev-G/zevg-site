@@ -21,7 +21,7 @@
     span {
         font-family: monospace;
         font-weight: bold;
-        color: lightgray;
+        color: var(--alt-text);
     }
 
     .see-more {

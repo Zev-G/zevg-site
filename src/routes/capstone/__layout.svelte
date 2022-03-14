@@ -2,6 +2,10 @@
     import Footer from "../../components/Footer.svelte";
 </script>
 
+<svelte:head>
+    <link rel="stylesheet" href="../../static/dark.css"/>
+</svelte:head>
+
 <div id="layout">
     <slot></slot>
     <footer>
@@ -15,31 +19,6 @@
         justify-content: space-between;
         flex-direction: column;
         min-height: 100vh;
-    }
-
-    :global(*) {
-        --main-bg: #111116;
-        --alt-bg: #191920;
-        --alt2-bg: rgb(31, 31, 39);
-        --alt3-bg: rgb(35, 35, 44);
-
-        --light-tint: rgba(69, 72, 85, 0.05);
-        --main-accent-tint: rgba(103, 145, 253, 0.3);
-        --alt-accent-tint: rgba(180, 103, 253, 0.3);
-
-        --alt-text: rgb(233, 233, 233);
-        --main-text: white;
-
-        --between-color: rgb(139, 148, 158);
-
-        --item-bg: #25262E;
-        --sub-item-bg: #30323d;
-        --sub2-item-bg:rgb(69, 72, 85);
-
-        --drop-shadow-color: rgba(0, 0, 0, 0.25);
-
-        --main-accent: #6791FD;
-        --alt-accent: #b467fd;
     }
 
     :global(a) {

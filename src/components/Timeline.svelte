@@ -210,7 +210,7 @@
     }
 
     .total, .end {
-        fill: rgba(218, 218, 218, 0.178);
+        fill: rgba(218, 218, 218, 0.2);
     }
 
     .start {

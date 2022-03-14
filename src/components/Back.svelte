@@ -39,7 +39,7 @@
     }
     .inner {
         background-color: var(--main-bg);
-        color: lightgray;
+        color: var(--alt-text);
         font-family: monospace;
         font-size: 18px;
         border-radius: 0.2em;

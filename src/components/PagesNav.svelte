@@ -7,7 +7,7 @@
 </script>
 
 <div class={"pages-nav " + (showing ? "content-visible" : "")} use:clickOutside on:outclick={() => showing = false}>
-    <div class="ml-icon" on:click={() => showing = !showing}>
+    <div class="ml-icon" on:click={() => showing = !showing} tabindex="0">
         <FaListUl />
     </div>
     {#if showing}

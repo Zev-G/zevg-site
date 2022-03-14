@@ -1,0 +1,24 @@
+* {
+    --main-bg: #ffffff;
+    --alt-bg: #e7e7e7;
+    --alt2-bg: rgb(109, 109, 134);
+    --alt3-bg: rgb(70, 70, 94);
+
+    --light-tint: rgba(55, 58, 70, 0.05);
+    --main-accent-tint: rgba(103, 145, 253, 0.3);
+    --alt-accent-tint: rgba(180, 103, 253, 0.3);
+
+    --alt-text: rgb(44, 44, 44);
+    --main-text: rgb(0, 0, 0);
+
+    --between-color: rgb(70, 74, 80);
+
+    --item-bg: #8b8fa8;
+    --sub-item-bg: #797e97;
+    --sub2-item-bg:rgb(100, 106, 129);
+
+    --drop-shadow-color: rgba(0, 0, 0, 0.144);
+
+    --main-accent: #6791FD;
+    --alt-accent: #b467fd;
+}

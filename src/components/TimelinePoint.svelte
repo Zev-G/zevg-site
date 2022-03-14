@@ -57,8 +57,8 @@
         <svg>
             <path d="M 0 0 l 150 0" />
         </svg>
-        <div on:click={tryToggleExpand}>
-            <div class="preview">{point.name}</div>
+        <div>
+            <div on:click={tryToggleExpand} tabindex="0" class="preview">{point.name}</div>
         </div>
     </div>
 </div>
@@ -114,7 +114,7 @@
         font-weight: 500;
         font-size: 19px;
 
-        color: white;
+        color: var(--main-text);
 
         margin: 0 10px;
         padding: 0.75em 1.2em;
@@ -149,7 +149,7 @@
 
     path {
         fill: none;
-        stroke: white;
+        stroke: var(--main-text);
         stroke-width: 6px;
         stroke-dasharray: 16px 8px;
     }

@@ -40,7 +40,7 @@
                     View progress
                 </SeeMore>
             {:else if linkFullRead}
-                <div on:click={readFullEntry}>
+                <div on:click={readFullEntry} tabindex="0">
                     <SeeMore >
                         Read full entry
                     </SeeMore>
@@ -72,7 +72,7 @@
 
     .detailed-entry {
         width: 100%;
-        color: white;
+        color: var(--main-text);
     }
 
     .date-view {

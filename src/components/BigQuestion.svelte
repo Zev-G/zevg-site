@@ -13,7 +13,7 @@
 
     .big-question {
         text-align: center;
-        color: white;
+        color: var(--main-text);
         margin-top: 10vh;
     }
 

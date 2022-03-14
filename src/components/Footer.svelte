@@ -27,7 +27,7 @@
     }
 
     p {
-        color: lightgray;
+        color: var(--alt-text);
     }
 
     a, p {
@@ -38,7 +38,7 @@
     .divide {
         font-family: monospace;
         font-size: 30px;
-        color: rgba(255, 255, 255, 0.1);
+        color: var(--alt3-bg);
     }
 
     @media(max-width: 750px) {

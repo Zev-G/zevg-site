@@ -6,6 +6,6 @@
 
 <style>
     a {
-        color: rgb(122, 164, 241);
+        color: var(--main-accent);
     }
 </style>

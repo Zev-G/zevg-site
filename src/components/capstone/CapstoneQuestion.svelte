@@ -5,7 +5,7 @@
 
 <style>
     p {
-        color: white;
+        color: var(--maint-text);
         font-size: 30px;
         font-family: monospace;
     }

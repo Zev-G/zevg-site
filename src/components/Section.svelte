@@ -5,7 +5,7 @@
 </script>
 
 <div class="setion">
-    <div class={"header " + (expanded ? "expanded" : "")} on:click={() => expanded = !expanded}>
+    <div tabindex="0" class={"header " + (expanded ? "expanded" : "")} on:click={() => expanded = !expanded}>
         <slot name="header"></slot>
         <div class="mid-icon">
             <IoIosArrowForward />

@@ -49,9 +49,9 @@
         background-color: var(--item-bg);
         border-radius: 20px;
 
-        filter: drop-shadow(0px 2px 4px rgb(37, 37, 43));
+        filter: drop-shadow(0px 2px 4px var(--drop-shadow-color));
 
-        color: white;
+        color: var(--main-text);
         cursor: pointer;
         padding: 0.5em 1em;
     }
@@ -67,7 +67,7 @@
     .answer {
         display: flex;
         padding: 1em 3em;
-        color: rgb(223, 223, 223);
+        color: var(--alt-text);
     }
 
     .qna:hover {
