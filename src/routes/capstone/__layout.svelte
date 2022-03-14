@@ -46,15 +46,15 @@
         color: var(--main-accent);
     }
 
-    :global(body::-webkit-scrollbar) {
+    :global(*::-webkit-scrollbar) {
         width: 0.5em;
     }
 
-    :global(body::-webkit-scrollbar-thumb) {
+    :global(*::-webkit-scrollbar-thumb) {
         background-color: var(--sub-item-bg);
         border-radius: 2px;
     }
-    :global(body::-webkit-scrollbar-thumb:hover) {
+    :global(*::-webkit-scrollbar-thumb:hover) {
         background-color: var(--sub2-item-bg);
     }
 

@@ -12,8 +12,7 @@
     <p>Switching to SvelteKit also meant that I could no longer use Firebase for hosting. After looking at my options I decided to switch to Vercel for hosting. This also fixed the really long loading time for the website.</p>
     <p>Lots of code needed to be refactored to properly make the switch. All my components needed to be moved into their own folder, and pages needed to be designed separately. One of the toughest parts of the switch was losing a global CSS file to put common styles in.</p>
     <p>To keep the global CSS functionaliy I added global selectors to my layout component. Here's what this switch looked like:</p>
-    <strong>global.css</strong>
-    <Code language={css} code={
+    <Code language={css} fileName="global.css" code={
 `body {
     color: var(--main-text);
     margin: 0;
