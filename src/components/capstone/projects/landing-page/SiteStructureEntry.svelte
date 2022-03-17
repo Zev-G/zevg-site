@@ -5,7 +5,7 @@
 <div>
     <p>{entry.explanation}</p>
     <p>The timeline will (by far) be the most difficult thing to implement.The logic is pretty straightforard, most of the difficulty is in the design. To help myself visualize what I'm building I want to make a design for what I want in Figma. Here's what that ended up looking like:</p>
-    <img src="https://i.imgur.com/YIU5JUP.png" alt="Figma design of timeline">
+    <img src="../../../../timeline-design.png" alt="Figma design of timeline">
     <p>
         I found this very useful and plan on using this strategy again in the future if I'm having trouble visualizing my final result.
     </p>
