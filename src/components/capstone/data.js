@@ -87,24 +87,24 @@ const chess = new ProjectElement(
     "I've already created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, allow games to be loaded from FENs, and look decent.", [
         new ProjectElement(Date.parse("Mar 18 2022"), Date.parse("Apr 20 2022"), "Basic Game", "",
             [
-                projectElem("Mar 21 2022", "Project and hosting setup"),
-                projectElem("Mar 26 2022", "Board and pieces"),
-                projectElem("Mar 31 2022", "Basic piece moving"),
-                projectElem("Apr 5 2022", "Complex piece moving"),
-                projectElem("Apr 10 2022", "Game rules"),
-                projectElem("Apr 15 2022", "Players and turns")
+                projectElem("Mar 21 2022", "Project and hosting setup", "The first step in starting this project is deciding how I want to structure it. I (currently) plan on using Svelte for my UI framework and Vercel for hosting."),
+                projectElem("Mar 26 2022", "Board and pieces", "Once the page is hosted the next step is to initialize a chess board with the correct pieces. This will require picking a color scheme and images for the chess pieces."),
+                projectElem("Mar 31 2022", "Basic piece moving", "This will be the first piece of logic that needs to be implemented. Every piece moves in a unique way, so a way of generating moves based on the board state and piece type needs to be created."),
+                projectElem("Apr 5 2022", "Complex piece moving", "During this section of the project I will add more complex movements to certain pieces. This includes castling and en passant."),
+                projectElem("Apr 10 2022", "Game rules", "Once the pieces can move the rules of the game need to be added. Chess has quite a few rules but some which will be difficult to implement are: pawn promotion, checkmating, not moving into check, and all of chess' draw conditions."),
+                projectElem("Apr 15 2022", "Players and turns", "The last thing which will need to be created for a functional game of chess is turn management and displaying the winner.")
             ]
         ),
         new ProjectElement(Date.parse("Apr 20 2022"), Date.parse("May 3 2022"), "Creating Computer Opponents", "",
             [
-                projectElem("Apr 22 2022", "Allow for computer opponents"),
-                projectElem("Apr 25 2022", "Implement Minimax opponent"),
-                projectElem("May 1 2022", "Optimization")
+                projectElem("Apr 22 2022", "Allow for computer opponents", "At this point in the chess project the code doesn't support non-human opponents. Some code refactoring will need to be done to allow for the computer to handle its own turns."),
+                projectElem("Apr 25 2022", "Implement Minimax opponent", "The plan isn't to create an insane computer opponent, just a Minimax based opponent. An explanation of the Minimax Algorithm can be found with a quick Google search."),
+                projectElem("May 1 2022", "Optimization", "To make the Minimax opponent more effective I'll need to optimize the program so that moves can be simulated more efficiently.")
             ]
         ),
-        new ProjectElement(Date.parse("May 3 2022"), Date.parse("June 1 2022"), "Extra Features", "To be determined",
+        new ProjectElement(Date.parse("May 3 2022"), Date.parse("June 1 2022"), "Polishing and Extra Features", "To be determined",
             [
-                projectElem("May 15 2022", "To be determined", "The specific extra features which I want to implement haven't yet been determined.")
+                projectElem("May 15 2022", "To be determined", "The specific features which I want to implement haven't yet been determined.")
             ]
         )
     ]

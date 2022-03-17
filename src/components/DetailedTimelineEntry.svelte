@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from "svelte";
+    import SimpleEntry from "./capstone/projects/SimpleEntry.svelte";
 
     import DateView from "./DateView.svelte";
     import SeeMore from "./SeeMore.svelte";
@@ -39,7 +40,7 @@
                 <SeeMore href={`/capstone/timeline/${index}`}>
                     View progress
                 </SeeMore>
-            {:else if linkFullRead}
+            {:else if linkFullRead && point.detailedView !== SimpleEntry}
                 <div on:click={readFullEntry} tabindex="0">
                     <SeeMore >
                         Read full entry

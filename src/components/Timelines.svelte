@@ -6,9 +6,11 @@
 
 <div class="timelines">
     <div class="tl-selectors">
-        {#each timelines as timeline}
+        {#if timelines}
+            {#each timelines as timeline}
             <div class={"tl-selector" + (selected === timeline ? " selected" : "")} on:click={() => selected = timeline} tabindex="0">{timeline.name}</div>
-        {/each}
+            {/each}
+        {/if}
     </div>
 </div>
 

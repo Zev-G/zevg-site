@@ -29,7 +29,9 @@
     let showPagesNav = false;
 
     function findTimelineMatchingDate(date) {
-        if (!timeline) return null;
+        if (!timeline || !timeline.points || !timeline.points[id]) {
+            return null;
+        }
         let timelines = timeline.points[id].points;
         if (date <= timelines[0].start) return timelines[0];
         if (date >= timelines[timelines.length - 1].end) return timelines[timelines.length - 1];
@@ -63,15 +65,19 @@
                 </ul>
             </PagesNav>
         </div>
-        <h1 class="page-title-s">{timeline.points[id].name}</h1>
+        <h1 class="page-title-s">{timeline.points[id] ? timeline.points[id].name : "Loading..."}</h1>
         <div class="timeline-selector">
-            <Timelines timelines={pageTimeline.points} bind:selected={displayedTimeline}/>
+            <Timelines timelines={pageTimeline ? pageTimeline.points : null} bind:selected={displayedTimeline}/>
         </div>
     </div>
     <hr>
-    <Timeline timeline={displayedTimeline} readFullEntries={true} on:goToEntry={(event) => goToEntry(event.detail.point)}/>
+    {#if displayedTimeline}
+        <Timeline timeline={displayedTimeline} readFullEntries={true} on:goToEntry={(event) => goToEntry(event.detail.point)}/>
+    {/if}
     <hr>
-    <EntrySection bind:this={rootFullEntry} entry={pageTimeline} expanded={true}/>
+    {#if pageTimeline}
+        <EntrySection bind:this={rootFullEntry} entry={pageTimeline} expanded={true}/>
+    {/if}
 </div>
 
 <style>
