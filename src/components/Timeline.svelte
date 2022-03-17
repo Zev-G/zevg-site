@@ -21,7 +21,8 @@
     let animateIn = true;
 
     $: animateIn = animateIn && ogTimeline === timeline;
-    let lastPointDate = getLastPoint().start;
+    let lastPoint = getLastPoint();
+    let lastPointDate = lastPoint ? lastPoint.start : start;
     let animationTime = 1.5 * (lastPointDate - start) / (Math.min(at, end) - start) * 1000;
     let animationDone = false;
     setTimeout(() => animationDone = true, animationTime);
@@ -61,7 +62,7 @@
 
     let size = 700;
     $: filled = Math.min(1, (at - start) / (end - start));
-    $: showDateMarker = filled !== 1;
+    $: showDateMarker = filled !== 1 && at >= start;
 
     function calcPoint(date) {
         return Math.round(size * Math.min(1, (date - start) / (end - start)));
@@ -91,6 +92,7 @@
 
 
     function getLastPoint() {
+        if (!points) return null;
         let originallyExpanded = null;
         if (points.length != 0) {
             for (let point of points) {
@@ -122,11 +124,11 @@
                 </linearGradient>
             </defs>
     
-            <rect class="start" width="80" height="15" />
-            <rect class="total" x="27.5" y="10" width="25" height={size - 25} />
+            <rect class="total" x="27.5" y="15" width="25" height={size - 30} />
+            <rect class={"start" + (at < start ? " not-filled" : "")} width="80" height="15" />
             <rect class="filled" x="27.5" y="10" width="25" style={"--filled: " + (size * filled) + "px;"} />
             <rect class="end" width="80" height="15" y={size - 15} />
-            <rect class="end-filled" width="80" y={size - 15} style={showDateMarker ? "opacity: 0;" : "opacity: 1;"} />
+            <rect class="end-filled" width="80" y={size - 15} style={filled !== 1 ? "opacity: 0;" : "opacity: 1;"} />
         </svg>
         <div class="main-dates">
             <div class="start-date">
@@ -216,6 +218,10 @@
     .start {
         fill: var(--main-accent);
     }
+    .start.not-filled {
+        fill: rgba(218, 218, 218, 0.2);
+    }
+
     .filled {
         fill: url("#filled-gradient");
     }

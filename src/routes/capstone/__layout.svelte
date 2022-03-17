@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="../../static/dark.css"/>
+    <link rel="stylesheet" href="/dark.css"/>
 </svelte:head>
 
 <div id="layout">

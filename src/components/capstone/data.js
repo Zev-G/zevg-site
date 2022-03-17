@@ -84,7 +84,30 @@ const website = new ProjectElement(Date.parse("Feb 26 2022"), Date.parse("June 2
 
 const chess = new ProjectElement(
     Date.parse("Apr 10 2022"), Date.parse("Apr 10 2022"), "Make a Chess Site",
-    "I've already created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, allow games to be loaded from FENs, and look decent."
+    "I've already created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, allow games to be loaded from FENs, and look decent.", [
+        new ProjectElement(Date.parse("Mar 18 2022"), Date.parse("Apr 20 2022"), "Basic Game", "",
+            [
+                projectElem("Mar 21 2022", "Project and hosting setup"),
+                projectElem("Mar 26 2022", "Board and pieces"),
+                projectElem("Mar 31 2022", "Basic piece moving"),
+                projectElem("Apr 5 2022", "Complex piece moving"),
+                projectElem("Apr 10 2022", "Game rules"),
+                projectElem("Apr 15 2022", "Players and turns")
+            ]
+        ),
+        new ProjectElement(Date.parse("Apr 20 2022"), Date.parse("May 3 2022"), "Creating Computer Opponents", "",
+            [
+                projectElem("Apr 22 2022", "Allow for computer opponents"),
+                projectElem("Apr 25 2022", "Implement Minimax opponent"),
+                projectElem("May 1 2022", "Optimization")
+            ]
+        ),
+        new ProjectElement(Date.parse("May 3 2022"), Date.parse("June 1 2022"), "Extra Features", "To be determined",
+            [
+                projectElem("May 15 2022", "To be determined", "The specific extra features which I want to implement haven't yet been determined.")
+            ]
+        )
+    ]
 );
 
 const nextYear = new ProjectElement(

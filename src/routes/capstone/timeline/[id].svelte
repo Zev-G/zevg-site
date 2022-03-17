@@ -17,7 +17,11 @@
 
     export let id;
 
-    let displayedTimeline = findTimelineMatchingDate(Date.now());
+    let displayedTimeline = null;
+    $: {
+        id;
+        displayedTimeline = findTimelineMatchingDate(Date.now());
+    }
     let rootFullEntry;
 
     $: pageTimeline = timeline.points[id];
@@ -25,6 +29,7 @@
     let showPagesNav = false;
 
     function findTimelineMatchingDate(date) {
+        if (!timeline) return null;
         let timelines = timeline.points[id].points;
         if (date <= timelines[0].start) return timelines[0];
         if (date >= timelines[timelines.length - 1].end) return timelines[timelines.length - 1];
