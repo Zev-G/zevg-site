@@ -69,7 +69,7 @@
     .items {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 2vh;
     }
 
     .entry-section {

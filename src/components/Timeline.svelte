@@ -141,7 +141,7 @@
         <div class="points">
             {#each points as point}
                 <div class="point" style={"top: " + (calcPoint(point.start) - 16) + "px;"}>
-                    <TimelinePoint animateIn={animateIn} bind:expandedPoint={expandedPoint} point={point} timeline={timeline} on:expanded={setExpandedPoint}/>
+                    <TimelinePoint on:goToEntry animateIn={animateIn} bind:expandedPoint={expandedPoint} point={point} timeline={timeline} on:expanded={setExpandedPoint}/>
                 </div>
             {/each}
         </div>

@@ -42,7 +42,7 @@
     }
 
     .content {
-        padding: 0 1em;
+        padding: 0 1vw;
         font-size: 20px;
         color: var(--alt-text);
     }

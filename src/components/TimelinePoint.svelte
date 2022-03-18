@@ -42,6 +42,11 @@
         if (window.matchMedia("(min-width: 1050px)").matches) {
             expanded = !expanded;
             sendExpandedEvent();
+        } else {
+            dispatch(
+                "goToEntry",
+                { point }
+            );
         }
     }
 </script>
@@ -127,8 +132,8 @@
 
     @media (max-width: 600px) {
         .preview {
-            font-size: 15px;
-            padding: 0.5em 0.75em;
+            font-size: 16.5px;
+            padding: 0.7em 1em;
         }
 
         svg {

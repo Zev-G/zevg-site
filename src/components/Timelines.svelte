@@ -20,8 +20,10 @@
     .tl-selectors {
         display: flex;
         filter: drop-shadow(0 0 2px var(--drop-shadow-color));
+        font-size: clamp(10px, 2vw, 16px);
     }
     .tl-selector {
+        text-align: center;
         padding: 0.2em 1em;
         background-color: var(--alt2-bg);
         border: var(--item-bg) solid 1px;

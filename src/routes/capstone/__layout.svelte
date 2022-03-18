@@ -66,7 +66,7 @@
         font-size: 80px;
     }
     :global(.page-title-s) {
-        font-size: 60px;
+        font-size: min(8vw, 60px);
     }
     :global(.subtitle) {
         font-size: 35px;
