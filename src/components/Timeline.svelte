@@ -125,10 +125,10 @@
             </defs>
     
             <rect class="total" x="27.5" y="15" width="25" height={size - 30} />
-            <rect class={"start" + (at < start ? " not-filled" : "")} width="80" height="15" />
+            <rect rx="2" class={"start" + (at < start ? " not-filled" : "")} width="80" height="15" />
             <rect class="filled" x="27.5" y="10" width="25" style={"--filled: " + (size * filled) + "px;"} />
-            <rect class="end" width="80" height="15" y={size - 15} />
-            <rect class="end-filled" width="80" y={size - 15} style={filled !== 1 ? "opacity: 0;" : "opacity: 1;"} />
+            <rect rx="2" class="end" width="80" height="15" y={size - 15} />
+            <rect rx="2" class="end-filled" width="80" y={size - 15} style={filled !== 1 ? "opacity: 0;" : "opacity: 1;"} />
         </svg>
         <div class="main-dates">
             <div class="start-date">
