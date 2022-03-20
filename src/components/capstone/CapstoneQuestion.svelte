@@ -12,19 +12,10 @@
 
     .highlighted {
         font-weight: bold;
-        background-image: -webkit-linear-gradient(45deg, var(--main-accent), var(--alt-accent) 80%);
+        background: linear-gradient(to right, var(--main-accent), var(--alt-accent));
         -webkit-background-clip: text;
         background-clip: text;
-        -webkit-text-fill-color: rgba(255, 255, 255, 0.2);
-        /* padding-bottom: 4px;
-        position: relative;
-        text-decoration: none;
-        display: inline;
-        text-decoration: underline;
-        text-decoration-color: var(--alt-accent);
-        background-repeat: no-repeat;
-        background-position: 120%, 122%, 0 130%;
-        background-size: 100% 10px; */
+        -webkit-text-fill-color: transparent;
     }
 
     @media (max-width: 500px) {
