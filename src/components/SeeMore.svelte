@@ -7,7 +7,7 @@
         <a href={href} on:click tabindex="0">
             <div class="link-container">
                 <div class="inner">
-                    <span><slot></slot> ></span>
+                    <span><slot></slot></span>
                 </div>
             </div>
         </a>
@@ -15,7 +15,7 @@
         <button class="simple" on:click tabindex="0">
             <div class="link-container">
                 <div class="inner">
-                    <span><slot></slot> ></span>
+                    <span><slot></slot></span>
                 </div>
             </div>
         </button>

@@ -38,12 +38,12 @@
             <p>{point.explanation}</p>
             {#if viewMore}
                 <SeeMore href={`/capstone/timeline/${index}`}>
-                    View progress
+                    View progress >
                 </SeeMore>
             {:else if linkFullRead && point.detailedView !== SimpleEntry}
                 <div>
                     <SeeMore on:click={readFullEntry}>
-                        Read full entry
+                        Read full entry >
                     </SeeMore>
                 </div>
             {/if}

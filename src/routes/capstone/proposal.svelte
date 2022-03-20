@@ -3,14 +3,13 @@ import SeeMore from "../../components/SeeMore.svelte";
 import CapstoneQuestion from "../../components/capstone/CapstoneQuestion.svelte";
 import Label from "../../components/Label.svelte";
 import Section from "../../components/Section.svelte";
-import Back from "../../components/Back.svelte";
 
 
 </script>
 
 <div id="proposal">
     <div class="back">
-        <Back href="/capstone">&lt; Back</Back>
+        <SeeMore href="/capstone">&lt; Back</SeeMore>
     </div>
     <div id="heading">
         <h1 class="page-title">Capstone Proposal</h1>
@@ -67,7 +66,10 @@ import Back from "../../components/Back.svelte";
     .back {
         position: absolute;
         margin: 0.5em 1em;
+    }
 
+    .back :global(.see-more) {
+        font-size: 18px;
     }
 
     .header-h1 {

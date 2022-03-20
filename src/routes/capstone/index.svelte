@@ -21,7 +21,7 @@
         </div>
         <Timeline timeline={timeline} />
         <BigQuestion answerComponent={CapstoneQuestion} question="Capstone Question" />
-        <SeeMore href="/capstone/proposal">Read more...</SeeMore>
+        <SeeMore href="/capstone/proposal">Read more... ></SeeMore>
         <QNAs qnas={qnas} />
     </div>
 	

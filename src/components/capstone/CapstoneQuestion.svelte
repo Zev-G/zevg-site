@@ -16,7 +16,8 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-shadow: 0px 0px #00000000;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
     }
 
     @media (max-width: 500px) {
