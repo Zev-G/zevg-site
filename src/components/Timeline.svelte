@@ -92,7 +92,7 @@
 
 
     function getLastPoint() {
-        if (!points) return null;
+        if (!points || points.length < 1 || points[0].start > at) return null;
         let originallyExpanded = null;
         if (points.length != 0) {
             for (let point of points) {

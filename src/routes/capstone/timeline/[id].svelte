@@ -34,9 +34,11 @@
         }
         let timelines = timeline.points[id].points;
         if (date <= timelines[0].start) return timelines[0];
-        if (date >= timelines[timelines.length - 1].end) return timelines[timelines.length - 1];
+        if (date >= timelines[timelines.length - 1].end) {
+            return timelines[timelines.length - 1];
+        }
         for (let tl in timelines) {
-            if (date <= tl.start) return tl;
+            if (date <= timelines[tl].end) return timelines[tl];
         }
         return timelines[timelines.length - 1];
     }
