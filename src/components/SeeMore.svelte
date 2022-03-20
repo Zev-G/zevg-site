@@ -69,6 +69,18 @@
         visibility: visible;
         opacity: 1;
     }
+    @media (pointer: coarse) {
+        .link-container::before {
+            position: inherit;
+            content: "";
+            background: none;
+            visibility: hidden;
+        }
+        .link-container:hover::before {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
     .inner {
         background-color: var(--main-bg);
         border-radius: 0.2em;
