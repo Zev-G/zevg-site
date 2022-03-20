@@ -56,7 +56,7 @@
     style={"--delay: " + delay + "s;"}
 >
     <div class="date">
-        <DateView date={point.start} />
+        <DateView showYear={false} date={point.start} />
     </div>
     <div class={"timeline-point " + ((expanded && !animating) ? "expanded" : "")}>
         <svg>

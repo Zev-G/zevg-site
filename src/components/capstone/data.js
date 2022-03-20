@@ -1,5 +1,3 @@
-import QNAView from "../QNAView.svelte";
-
 import ProjectElement from "./ProjectElement";
 
 import SimpleEntry from "./projects/SimpleEntry.svelte";
@@ -16,34 +14,16 @@ import DetailedExplanationEntry from "./projects/landing-page/DetailedExplanatio
 
 export const qnas = [
     {
-        question: {
-            text: "How was this website made?",
-            component: QNAView
-        },
-        answer: {
-            text: "This website was created using vanilla Svelte. The timeline was quite difficult to implement and so an earlier version of it was designed on Figma before being created in the actual project. Many thanks go to CSS Tricks and W3Schools for providing great documentation for JS, HTML and CSS.",
-            component: QNAView
-        }
+        question: "How was this website made?",
+        answer: "This website was created using vanilla Svelte. The timeline was quite difficult to implement and so an earlier version of it was designed on Figma before being created in the actual project. Many thanks go to CSS Tricks and W3Schools for providing great documentation for JS, HTML and CSS."
     },
     {
-        question: {
-            text: "Where is this site's code?",
-            component: QNAView
-        },
-        answer: {
-            text: "Currently this site is private on my github, but once I feel it's more complete I'll make the project public. Once that happens you will be able to find it at https://www.github.com/Zev-G.",
-            component: QNAView
-        }
+        question: "Where is this site's code?",
+        answer: "Currently this site is private on my github, but once I feel it's more complete I'll make the project public. Once that happens you will be able to find it at https://www.github.com/Zev-G."
     },
     {
-        question: {
-            text: "How is this site hosted?",
-            component: QNAView
-        },
-        answer: {
-            text: "This website is hosted using Vercel on a custom domain purchased from Google Domains.",
-            component: QNAView
-        }
+        question: "How is this site hosted?",
+        answer: "This website is hosted using Vercel on a custom domain purchased from Google Domains."
     }
 ];
 

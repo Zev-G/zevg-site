@@ -45,9 +45,9 @@ a {
 */
 
 /* Titles / Subtitles */
-.page-title, .subtitle, .page-title-s {
+.page-title, .page-title-s {
     margin-top: 0.1em;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.05em;
 }
 
 .page-title {
@@ -58,6 +58,10 @@ a {
 }
 .subtitle {
     font-size: 35px;
+    margin: 0;
+    font-family: monospace;
+    letter-spacing: 0.6ch;
+    color: var(--alt2-text);
 }
 @media (max-width: 900px) {
     .page-title {
@@ -83,11 +87,6 @@ a {
         font-size: 20px;
     }
 }
-
-.subtitle {
-    color: var(--alt-text);
-}
-
 /* Icons */
 .mid-icon {
     width: 25px;

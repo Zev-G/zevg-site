@@ -1,10 +1,10 @@
 <script>
     import { goto } from "$app/navigation";
 
-    import QNAs from "../../components/QNAs.svelte";
     import Timeline from "../../components/Timeline.svelte";
     import BigQuestion from "../../components/BigQuestion.svelte";
     import SeeMore from "../../components/SeeMore.svelte";
+    import Section from "../../components/Section.svelte";
 
     import CapstoneQuestion from "../../components/capstone/CapstoneQuestion.svelte";
 
@@ -30,12 +30,29 @@
         <Timeline timeline={timeline} on:goToEntry={(event) => navigateToPoint(event.detail.point)} />
         <BigQuestion answerComponent={CapstoneQuestion} question="Capstone Question" />
         <SeeMore href="/capstone/proposal">Read more... ></SeeMore>
-        <QNAs qnas={qnas} />
+        <div class="sections">
+            {#each qnas as qna}
+                <Section>
+                    <h1 slot="header">{qna.question}</h1>
+                    <p slot="content">{qna.answer}</p>
+                </Section>
+            {/each}
+        </div>
     </div>
 	
 </main>
 
 <style>
+
+    .sections h1 {
+        margin: 0;
+    }
+    .sections {
+        margin: 4rem 2vw 0 2vw;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5vh
+    }
 	
     main {
         display: flex;

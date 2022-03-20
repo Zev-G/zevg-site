@@ -8,16 +8,31 @@
         color: var(--maint-text);
         font-size: 30px;
         font-family: monospace;
+        letter-spacing: 0.1ch;
     }
 
     .highlighted {
         font-weight: bold;
-        background: linear-gradient(to right, var(--main-accent), var(--alt-accent));
+        background: linear-gradient(to right, var(--main-accent), var(--alt-accent), var(--main-accent), var(--alt-accent));
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
     @media (max-width: 500px) {
