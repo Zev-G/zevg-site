@@ -51,7 +51,7 @@
         background-color: var(--sub-item-bg);
         z-index: 1;
     }
-    /* .link-container::before {
+    .link-container::before {
         position: absolute;
         content: "";
         top: 0;
@@ -63,10 +63,12 @@
         z-index: -1;
         transition: opacity 0.25s linear;
         opacity: 0;
+        visibility: hidden;
     }
     .link-container:hover::before {
+        visibility: visible;
         opacity: 1;
-    } */
+    }
     .inner {
         background-color: var(--main-bg);
         border-radius: 0.2em;
