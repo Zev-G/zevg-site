@@ -80,7 +80,7 @@
     {#if displayedTimeline}
         <Timeline timeline={displayedTimeline} readFullEntries={true} on:goToEntry={(event) => goToEntry(event.detail.point)}/>
     {/if}
-    <hr>
+    <hr class="darker">
     {#if pageTimeline}
         <EntrySection bind:this={rootFullEntry} entry={pageTimeline} expanded={true}/>
     {/if}
@@ -102,6 +102,15 @@
         background-color: var(--alt3-bg);
     }
 
+    @media(max-width: 550px) {
+        #nav-home {
+            visibility: hidden;
+        }
+        #content {
+            padding: 1em;
+        }
+    }
+
     ul {
         padding: 0;
         margin: 0;
@@ -112,6 +121,9 @@
         margin: 1.5rem 0;
         border: none;
         border-top: 5px solid var(--sub-item-bg);
+    }
+    hr.darker {
+        border-top-color: var(--alt3-bg);
     }
 
     li:not(:last-child) {

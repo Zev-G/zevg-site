@@ -117,7 +117,7 @@
         font-family: monospace;
         font-style: normal;
         font-weight: 500;
-        font-size: 19px;
+        font-size: clamp(13px, 3vw, 20px);
 
         color: var(--main-text);
 
@@ -132,7 +132,6 @@
 
     @media (max-width: 600px) {
         .preview {
-            font-size: 16.5px;
             padding: 0.7em 1em;
         }
 
