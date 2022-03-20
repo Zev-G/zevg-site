@@ -8,7 +8,7 @@
     <div class="tl-selectors">
         {#if timelines}
             {#each timelines as timeline}
-            <div class={"tl-selector" + (selected === timeline ? " selected" : "")} on:click={() => selected = timeline} tabindex="0">{timeline.name}</div>
+            <button class={"tl-selector simple" + (selected === timeline ? " selected" : "")} on:click={() => selected = timeline} tabindex="0">{timeline.name}</button>
             {/each}
         {/if}
     </div>
@@ -20,10 +20,11 @@
     .tl-selectors {
         display: flex;
         filter: drop-shadow(0 0 2px var(--drop-shadow-color));
-        font-size: clamp(10px, 2vw, 16px);
     }
     .tl-selector {
+        font-size: clamp(10px, 2vw, 16px);
         text-align: center;
+        color: var(--main-color);
         padding: 0.2em 1em;
         background-color: var(--alt2-bg);
         border: var(--item-bg) solid 1px;

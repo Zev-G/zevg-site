@@ -1,15 +1,25 @@
 <script>
-    export let href;
+    export let href = null;
 </script>
 
 <div class="see-more">
-    <a href={href}>
-        <div class="link-container">
-            <div class="inner">
-                <span><slot></slot> ></span>
+    {#if href}
+        <a href={href} on:click tabindex="0">
+            <div class="link-container">
+                <div class="inner">
+                    <span><slot></slot> ></span>
+                </div>
             </div>
-        </div>
-    </a>
+        </a>
+    {:else}
+        <button class="simple" on:click tabindex="0">
+            <div class="link-container">
+                <div class="inner">
+                    <span><slot></slot> ></span>
+                </div>
+            </div>
+        </button>
+    {/if}
 </div>
 
 

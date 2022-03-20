@@ -4,6 +4,7 @@
 
 <svelte:head>
     <link rel="stylesheet" href="/dark.css"/>
+    <link rel="stylesheet" href="/global.css"/>
 </svelte:head>
 
 <div id="layout">
@@ -20,11 +21,7 @@
         flex-direction: column;
         min-height: 100vh;
     }
-
-    :global(a) {
-        color: var(--main-accent);
-    }
-
+/*     
     :global(*::-webkit-scrollbar) {
         width: 0.5em;
     }
@@ -105,5 +102,5 @@
     }
     :global(.ml-icon) {
         width: 30px;
-    }
+    } */
 </style>

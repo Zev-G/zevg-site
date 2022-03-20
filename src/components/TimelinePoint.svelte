@@ -63,7 +63,7 @@
             <path d="M 0 0 l 150 0" />
         </svg>
         <div>
-            <div on:click={tryToggleExpand} tabindex="0" class="preview">{point.name}</div>
+            <button on:click={tryToggleExpand} tabindex="0" class="preview simple">{point.name}</button>
         </div>
     </div>
 </div>

@@ -41,8 +41,8 @@
                     View progress
                 </SeeMore>
             {:else if linkFullRead && point.detailedView !== SimpleEntry}
-                <div on:click={readFullEntry} tabindex="0">
-                    <SeeMore >
+                <div>
+                    <SeeMore on:click={readFullEntry}>
                         Read full entry
                     </SeeMore>
                 </div>

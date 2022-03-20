@@ -7,9 +7,11 @@
 </script>
 
 <div class={"pages-nav " + (showing ? "content-visible" : "")} use:clickOutside on:outclick={() => showing = false}>
-    <div class="ml-icon" on:click={() => showing = !showing} tabindex="0">
-        <FaListUl />
-    </div>
+    <button class="simple" on:click={() => showing = !showing} tabindex="0">
+        <div class="ml-icon">
+            <FaListUl />
+        </div>
+    </button>
     {#if showing}
         <div class="dropdown-content" transition:fade={{ duration: 70 }}>
             <slot></slot>

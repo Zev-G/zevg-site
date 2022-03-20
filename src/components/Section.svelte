@@ -5,12 +5,12 @@
 </script>
 
 <div class="setion">
-    <div tabindex="0" class={"header " + (expanded ? "expanded" : "")} on:click={() => expanded = !expanded}>
+    <button class={"header simple " + (expanded ? "expanded" : "")} on:click={() => expanded = !expanded}>
         <slot name="header"></slot>
         <div class="mid-icon">
             <IoIosArrowForward />
         </div>
-    </div>
+    </button>
     {#if expanded}
         <hr>
         <div class="content">
@@ -49,6 +49,8 @@
 
     .header {
         display: flex;
+        width: 100%;
+        color: var(--main-color);
         justify-content: space-between;
         align-items: center;
 
