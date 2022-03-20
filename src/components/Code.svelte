@@ -34,7 +34,7 @@
         padding: 0.5em;
         margin: 0;
         font-size: 1.15em;
-        font-family: monospace;
+        font-family: var(--monospace);
     }
     hr {
         margin: 0;

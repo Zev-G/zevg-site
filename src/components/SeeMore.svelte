@@ -29,7 +29,7 @@
     }
 
     span {
-        font-family: monospace;
+        font-family: var(--monospace);
         font-weight: bold;
         color: var(--alt-text);
     }

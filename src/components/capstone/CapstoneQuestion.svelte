@@ -7,7 +7,7 @@
     p {
         color: var(--maint-text);
         font-size: 30px;
-        font-family: monospace;
+        font-family: var(--monospace);
         letter-spacing: 0.1ch;
     }
 

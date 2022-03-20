@@ -153,7 +153,7 @@
         padding: 0.3em 1em 0.3em 0.5em;
         font-weight: bold;
         font-size: 1.1em;
-        font-family: monospace;
+        font-family: var(--monospace);
     }
 
     .hyperlink-content:hover {

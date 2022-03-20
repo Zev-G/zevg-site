@@ -107,7 +107,7 @@
     }
     h2 {
         font-size: 40px;
-        /* font-family: monospace; */
+        /* font-family: var(--monospace); */
         /* letter-spacing: 0.1em; */
     }
     @media (max-width: 850px) {

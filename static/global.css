@@ -1,3 +1,9 @@
+/* Variables */
+
+* {
+    --monospace: "Consolas", "Monaco", "Roboto", "Lucida Console", "Courier New", monospace ;
+}
+
 /* Scrolling: */
 
 *::-webkit-scrollbar {
@@ -59,7 +65,7 @@ a {
 .subtitle {
     font-size: 35px;
     margin: 0;
-    font-family: monospace;
+    font-family: var(--monospace);
     letter-spacing: 0.6ch;
     color: var(--alt2-text);
 }

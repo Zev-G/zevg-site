@@ -15,7 +15,7 @@
 
 <style>
     .date-view {
-        font-family: monospace;
+        font-family: var(--monospace);
         font-style: normal;
         font-weight: 500;
         font-size: 17px;

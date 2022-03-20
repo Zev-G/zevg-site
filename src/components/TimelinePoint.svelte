@@ -114,7 +114,7 @@
 
     .preview {
         text-align: center;
-        font-family: monospace;
+        font-family: var(--monospace);
         font-style: normal;
         font-weight: 500;
         font-size: clamp(13px, 3vw, 20px);

@@ -32,11 +32,11 @@
 
     a, p {
         font-size: 18px;
-        font-family: monospace;
+        font-family: var(--monospace);
     }
 
     .divide {
-        font-family: monospace;
+        font-family: var(--monospace);
         font-size: 30px;
         color: var(--alt3-bg);
     }
