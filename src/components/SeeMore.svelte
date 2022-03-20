@@ -51,7 +51,7 @@
         background-color: var(--sub-item-bg);
         z-index: 1;
     }
-    .link-container::before {
+    /* .link-container::before {
         position: absolute;
         content: "";
         top: 0;
@@ -66,7 +66,7 @@
     }
     .link-container:hover::before {
         opacity: 1;
-    }
+    } */
     .inner {
         background-color: var(--main-bg);
         border-radius: 0.2em;
