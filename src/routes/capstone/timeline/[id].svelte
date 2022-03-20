@@ -57,6 +57,13 @@
         <div class="pages-nav">
             <PagesNav bind:showing={showPagesNav}>
                 <ul>
+                    <li class="home">
+                        <a href="/capstone">
+                            <div class="hyperlink-content">
+                                &lt; Home
+                            </div>
+                        </a>
+                    </li>
                     {#each timeline.points as point, i}
                         {#if point.points.length > 0}
                             <li class={i == id ? "selected" : ""}>
@@ -131,9 +138,18 @@
     }
 
     .hyperlink-content {
+        margin: 0.5em;
         padding: 0.5em 1em 0.5em 1em;
         border-radius: 5px;
         cursor: pointer;
+    }
+
+    .home .hyperlink-content {
+        margin-left: 0;
+        padding: 0.3em 1em 0.3em 0.5em;
+        font-weight: bold;
+        font-size: 1.1em;
+        font-family: monospace;
     }
 
     .hyperlink-content:hover {

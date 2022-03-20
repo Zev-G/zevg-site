@@ -33,7 +33,7 @@
 
     .dropdown-content {
         background-color: var(--alt3-bg);
-        padding: 1em;
+        padding: 0.2em 0.5em 0.5em 0.5em;
     }
 
     .ml-icon {
