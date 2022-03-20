@@ -14,6 +14,7 @@
     import Timelines from "../../../components/Timelines.svelte";
     import Timeline from "../../../components/Timeline.svelte";
     import EntrySection from "../../../components/capstone/projects/EntrySection.svelte";
+    import SeeMore from "../../../components/SeeMore.svelte";
 
     export let id;
 
@@ -48,6 +49,9 @@
     }
 </script>
 
+<div id="nav-home">
+    <SeeMore href="/capstone">&lt; Home</SeeMore>
+</div>
 <div id="content">
     <div id="header">
         <div class="pages-nav">
@@ -83,6 +87,21 @@
 </div>
 
 <style>
+    #nav-home {
+        position: absolute;
+        margin: 0.3rem;
+    }
+    #nav-home :global(.see-more) {
+        font-size: clamp(12px, 4vh, 20px);
+        padding: 0;
+    }
+    #nav-home :global(.inner) {
+        padding: 0.2em 0.75em 0.3em 0.75em;
+    }
+    #nav-home :global(.link-container) {
+        background-color: var(--alt3-bg);
+    }
+
     ul {
         padding: 0;
         margin: 0;
@@ -120,7 +139,7 @@
     
 
     #content {
-        padding: 1em;
+        padding: 1.75em 1em 1em 1em;
     }
 
     #header {

@@ -14,7 +14,6 @@
     .big-question {
         text-align: center;
         color: var(--main-text);
-        margin-top: 10vh;
     }
 
     h1 {
