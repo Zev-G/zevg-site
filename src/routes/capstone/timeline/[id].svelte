@@ -49,6 +49,10 @@
     }
 </script>
 
+<svelte:head>
+  <title>{pageTimeline ? pageTimeline.name : "Loading..."}</title>
+</svelte:head>
+
 <div id="nav-home">
     <SeeMore href="/capstone">&lt; Home</SeeMore>
 </div>

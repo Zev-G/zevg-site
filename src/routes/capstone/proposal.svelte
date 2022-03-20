@@ -1,11 +1,13 @@
 <script>
-import SeeMore from "../../components/SeeMore.svelte";
-import CapstoneQuestion from "../../components/capstone/CapstoneQuestion.svelte";
-import Label from "../../components/Label.svelte";
-import Section from "../../components/Section.svelte";
-
-
+    import SeeMore from "../../components/SeeMore.svelte";
+    import CapstoneQuestion from "../../components/capstone/CapstoneQuestion.svelte";
+    import Label from "../../components/Label.svelte";
+    import Section from "../../components/Section.svelte";
 </script>
+
+<svelte:head>
+  <title>Capstone Proposal | Zev Godfrey</title>
+</svelte:head>
 
 <div id="proposal">
     <div class="back">
