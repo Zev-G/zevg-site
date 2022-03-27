@@ -1,0 +1,27 @@
+* {
+    --main-bg: hsl(288, 12%, 8%);
+    --alt-bg: hsl(288, 12%, 11%);
+    --alt2-bg: hsl(288, 11%, 14%);
+    --alt3-bg: hsl(288, 11%, 15%);
+
+    --light-tint: hsla(229, 10%, 30%, 0.05);
+    --main-accent-tint: hsla(223, 97%, 70%, 0.3);
+    --alt-accent-tint: hsla(271, 97%, 70%, 0.3);
+
+    --alt-text: hsl(0, 0%, 91%);
+    --alt2-text: hsl(0, 0%, 71%);
+    --main-text: white;
+
+    --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
+    --between-color: rgb(158, 139, 154);
+
+    --item-bg: hsl(332, 11%, 16%);
+    --sub-item-bg: hsl(332, 12%, 21%);
+    --sub2-item-bg:hsl(332, 9%, 31%);
+
+    --drop-shadow-color: rgba(0, 0, 0, 0.25);
+
+    --main-accent: hsl(34, 91%, 63%);
+    --alt-accent: hsl(350, 90%, 59%);
+}

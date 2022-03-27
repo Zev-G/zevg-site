@@ -1,12 +1,11 @@
 <script>
-    import Footer from "../../components/Footer.svelte";
+    import Footer from "../components/Footer.svelte";
 </script>
 
 <svelte:head>
-    <link rel="stylesheet" href="/dark.css"/>
+    <link rel="stylesheet" href="/cool-breeze.css"/>
     <link rel="stylesheet" href="/global.css"/>
 </svelte:head>
-
 <div id="layout">
     <slot></slot>
     <footer>
