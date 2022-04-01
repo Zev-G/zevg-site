@@ -1,21 +1,30 @@
 <script>
     export let imgSrc;
+    export let href = "";
 </script>
 
 <div class="card">
-    <img alt="Card showcase" src={imgSrc}>
-    <div class="content">
-        <slot name="heading"></slot>
-        <slot name="content"></slot>
-    </div>
+    <a href={href}>
+        <img alt="Card showcase" src={imgSrc}>
+        <div class="content">
+            <slot name="heading"></slot>
+            <slot name="content"></slot>
+        </div>
+    </a>
 </div>
 
-<style>
 
+<style>
     img {
         /* aspect-ratio: 4 / 2; */
         width: clamp(100px, 40vw, 500px);
         border-radius: 1rem 1rem 0 0;
+    }
+
+    a {
+        color: var(--main-text);
+        text-decoration: none;
+        background-color: var(--item-bg);
     }
 
     .card {

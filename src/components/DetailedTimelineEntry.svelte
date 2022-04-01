@@ -72,7 +72,7 @@
     }
 
     .detailed-entry {
-        width: 100%;
+        width: min(100%, 1150px);
         color: var(--main-text);
     }
 

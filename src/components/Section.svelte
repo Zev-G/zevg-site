@@ -76,10 +76,6 @@
     }
 
     @media(max-width: 900px) {
-        span {
-            font-size: 20px;
-        }
-
         .content {
             font-size: 17px;
         }
@@ -90,10 +86,6 @@
     }
 
     @media(max-width: 750px) {
-        span {
-            font-size: 15px;
-        }
-
         .content {
             font-size: 15px;
         }

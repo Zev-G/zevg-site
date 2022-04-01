@@ -10,6 +10,8 @@
     <a href="https://www.github.com/Zev-G">Github</a>
     <span class="divide">/</span>
     <a href="/capstone">Capstone Homepage</a>
+    <span class="divide">/</span>
+    <a href="/projects">Projects</a>
 </div>
 
 <style>

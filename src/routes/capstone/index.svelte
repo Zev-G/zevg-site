@@ -5,6 +5,7 @@
     import BigQuestion from "../../components/BigQuestion.svelte";
     import SeeMore from "../../components/SeeMore.svelte";
     import Section from "../../components/Section.svelte";
+    import ProjectsPreview from "../../components/ProjectsPreview.svelte";
 
     import CapstoneQuestion from "../../components/capstone/CapstoneQuestion.svelte";
 
@@ -28,8 +29,14 @@
             <h2 class="subtitle">Zev Godfrey</h2>
         </div>
         <Timeline timeline={timeline} on:goToEntry={(event) => navigateToPoint(event.detail.point)} />
-        <BigQuestion answerComponent={CapstoneQuestion} question="Capstone Question" />
+        <BigQuestion question="Capstone Question">
+            <CapstoneQuestion/>
+        </BigQuestion>
         <SeeMore href="/capstone/proposal">Read more... ></SeeMore>
+        <hr>
+        <BigQuestion question="My Projects">
+            <ProjectsPreview />
+        </BigQuestion>
         <div class="sections">
             {#each qnas as qna}
                 <Section>
@@ -44,6 +51,13 @@
 
 <style>
 
+    hr {
+        width: 90%;
+        margin-top: 3vh;
+        border: none;
+        border-top: 5px solid var(--sub-item-bg);
+    }
+
     .sections h1 {
         margin: 0;
     }
@@ -51,6 +65,7 @@
         margin: 4rem 2vw 0 2vw;
         display: flex;
         flex-direction: column;
+        text-align: left;
         gap: 1.5vh
     }
 	

@@ -1,12 +1,10 @@
 <script>
     export let question;
-    export let answerComponent;
-    export let answer;
 </script>
 
 <div class="big-question">
     <h1>{question}</h1>
-    <svelte:component this={answerComponent} answer={answer} />
+    <slot/>
 </div>
 
 <style>
@@ -17,6 +15,7 @@
     }
 
     h1 {
+        margin-top: 0;
         font-size: 66px;
     }
 
