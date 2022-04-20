@@ -55,7 +55,7 @@
             <h1 class="header-h1" slot="header">How will my capstone progress be documented?</h1>
             <div slot="content">
                 <p>
-                    Documentation for my capstone is available on my website. See <a href="https://www.zevg.ca/capstone/timeline/0">my timeline.</a>
+                    Documentation for my capstone is available on my website. See <a href="/capstone/timeline/0">my timeline.</a>
                 </p>
             </div>
         </Section>
