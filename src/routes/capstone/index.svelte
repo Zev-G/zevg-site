@@ -37,6 +37,10 @@
         <BigQuestion question="My Projects">
             <ProjectsPreview />
         </BigQuestion>
+        <hr>
+        <BigQuestion question="About Me">
+            <p>I'm a 16 year old developer living in Victoria BC. I've been programming primarily in Java since early 2020 but I also have smaller projects in a variety of languages and frameworks. Lately I've been learning web technologies while developing my website and working on my Capstone Project for school.</p>
+        </BigQuestion>
         <div class="sections">
             {#each qnas as qna}
                 <Section>
@@ -74,6 +78,12 @@
         justify-content: center;
         text-align: center;
         flex-direction: column;
+    }
+
+    p {
+        /* font-family: var(--monospace); */
+        font-size: clamp(18px, 1.5vw, 30px);
+        margin: 0 6em;
     }
 
     #top {
