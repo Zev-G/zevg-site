@@ -28,7 +28,7 @@
         </Section>
         <Section>
             <h1 class="header-h1" slot="header">
-                Major steps in capstone project:
+                Major steps in capstone project
             </h1>
             <div slot="content">
                 <p>
@@ -41,7 +41,7 @@
             </div>
         </Section>
         <Section>
-            <h1 class="header-h1" slot="header">Possible limitations/obstacles that I may experience:</h1>
+            <h1 class="header-h1" slot="header">Possible limitations/obstacles that I may experience</h1>
             <div slot="content">
                 <p>
                     Programming and learning to program is hard and takes a lot of time. Some of my previous projects have taken hundreds of hours and I expect this trend of large time commitments to continue. With all my other obligations finding this time could pose a real challenge.
@@ -55,8 +55,21 @@
             <h1 class="header-h1" slot="header">How will my capstone progress be documented?</h1>
             <div slot="content">
                 <p>
-                    Documentation for my capstone will appear on my website. The details of this are to be determined.
+                    Documentation for my capstone is available on my website. See <a href="https://www.zevg.ca/capstone/timeline/0">my timeline.</a>
                 </p>
+            </div>
+        </Section>
+        <Section>
+            <h1 class="header-h1" slot="header">Possible mentors</h1>
+            <div slot="content">
+                <p>
+                    My possible mentors include:
+                </p>
+                <ul>
+                    <li>Dalton</li>
+                    <li>Mrs Okeefe</li>
+                    <li>Reuben's Dad</li>
+                </ul>
             </div>
         </Section>
     </div>
