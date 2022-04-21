@@ -12,6 +12,8 @@
     <a href="/capstone">Capstone Homepage</a>
     <span class="divide">/</span>
     <a href="/projects">Projects</a>
+    <span class="divide">/</span>
+    <a href="/capstone/timeline/0">Timeline</a>
 </div>
 
 <style>
