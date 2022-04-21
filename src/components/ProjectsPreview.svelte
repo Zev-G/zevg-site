@@ -12,7 +12,7 @@
 
     img {
         opacity: 0.75;
-        width: clamp(400px, 50vw, 1500px);
+        width: clamp(300px, 50vw, 1500px);
     }
 
     div :global(.see-more) {
