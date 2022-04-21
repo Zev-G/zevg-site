@@ -1,4 +1,5 @@
 <script>
+    import ProgressEmoji from "./ProgressEmoji.svelte";
     export let timelines;
 
     export let selected;
@@ -8,7 +9,12 @@
     <div class="tl-selectors">
         {#if timelines}
             {#each timelines as timeline}
-            <button class={"tl-selector simple" + (selected === timeline ? " selected" : "")} on:click={() => selected = timeline} tabindex="0">{timeline.name}</button>
+            <button class={"tl-selector simple" + (selected === timeline ? " selected" : "")} on:click={() => selected = timeline} tabindex="0">
+                {timeline.name}
+                {#if timeline.start <= Date.now()}
+                    <ProgressEmoji progress={timeline.progress}/>
+                {/if}
+            </button>
             {/each}
         {/if}
     </div>
@@ -36,5 +42,9 @@
 
     .tl-selector.selected {
         background-color: var(--sub-item-bg);
+    }
+
+    .tl-selector :global(.icon) {
+        margin-left: 0.5em;
     }
 </style>

@@ -1,6 +1,7 @@
 <script>
     import DateView from "./DateView.svelte";
     import { createEventDispatcher, onMount } from 'svelte';
+    import ProgressEmoji from "./ProgressEmoji.svelte";
 
     const dispatch = createEventDispatcher();
 
@@ -30,7 +31,6 @@
 
     function sendExpandedEvent() {
         if (point !== expandedPoint || !expanded) {
-            console.log("Dispatching " + expanded);
             dispatch("expanded", {
                 expanded,
                 point
@@ -63,7 +63,12 @@
             <path d="M 0 0 l 150 0" />
         </svg>
         <div>
-            <button on:click={tryToggleExpand} tabindex="0" class="preview simple">{point.name}</button>
+            <button on:click={tryToggleExpand} tabindex="0" class="preview simple">
+                {point.name}
+                {#if passed}
+                    <ProgressEmoji progress={point.progress}/>
+                {/if}
+            </button>
         </div>
     </div>
 </div>
