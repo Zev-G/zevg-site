@@ -15,7 +15,7 @@
     <span class="divide">/</span>
     <a href="/capstone/timeline/0">Timeline</a>
 </div>
-
+    
 <style>
     #footer {
         display: flex;
