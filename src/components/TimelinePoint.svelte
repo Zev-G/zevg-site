@@ -99,17 +99,17 @@
         align-items: center;
     }
 
+    .preview {
+        cursor: pointer;
+    }
+
+    .preview:hover {
+        text-decoration: underline;
+    }
+
     @media (min-width: 1050px) {
         .expanded > div > .preview {
             transform: scale(1.1) translateX(25px);
-        }
-
-        .preview {
-            cursor: pointer;
-        }
-
-        .preview:hover {
-            text-decoration: underline;
         }
     }
 

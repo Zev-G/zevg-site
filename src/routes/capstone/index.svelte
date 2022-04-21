@@ -81,9 +81,8 @@
     }
 
     .about-me {
-        /* font-family: var(--monospace); */
-        font-size: clamp(18px, 1.5vw, 30px);
-        margin: 0 6em;
+        font-size: clamp(18px, 1.5vw, 25px);
+        margin: 0 2vw;
     }
 
     #top {

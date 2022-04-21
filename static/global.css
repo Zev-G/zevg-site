@@ -1,7 +1,7 @@
 /* Variables */
 
 * {
-    --monospace: "Consolas", "Monaco", "Roboto", "Lucida Console", "Courier New", monospace ;
+    --monospace: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
 }
 
 /* Scrolling: */
