@@ -15,7 +15,7 @@
         font-weight: bold;
         background: linear-gradient(to right, var(--main-accent), var(--alt-accent), var(--main-accent), var(--alt-accent));
         background-size: 400% 400%;
-        animation: gradient 10s ease infinite;
+        animation: gradient 5s ease infinite;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;

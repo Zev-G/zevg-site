@@ -81,10 +81,4 @@
         font-size: clamp(14px, 1.5vw, 35px);;
         color: var(--alt3-bg);
     }
-
-    @media(max-width: 550px) {
-        #footer {
-            visibility: hidden;
-        }
-    }
 </style>

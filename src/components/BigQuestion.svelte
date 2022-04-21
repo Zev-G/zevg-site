@@ -16,13 +16,7 @@
 
     h1 {
         margin-top: 0;
-        font-size: 66px;
-    }
-
-    @media (max-width: 500px) {
-        h1 {
-            font-size: 40px;
-        }
+        font-size: clamp(40px, 7vw, 70px);
     }
 
 </style>

@@ -43,7 +43,7 @@
 
     .content {
         padding: 0 1vw;
-        font-size: 20px;
+        font-size: clamp(15px, 1.5vw, 25px);
         color: var(--alt-text);
     }
 
@@ -55,7 +55,7 @@
         align-items: center;
 
         cursor: pointer;
-        font-size: 16px;
+        font-size: clamp(10px, 1.05vw, 18px);
 
         padding: 0.5em 1em;
         border-radius: 15px 15px 0 0 ;
@@ -73,25 +73,5 @@
     }
     .header:hover:not(.expanded) {
         background-color: var(--alt3-bg);
-    }
-
-    @media(max-width: 900px) {
-        .content {
-            font-size: 17px;
-        }
-
-        .header {
-            font-size: 12px;
-        }
-    }
-
-    @media(max-width: 750px) {
-        .content {
-            font-size: 15px;
-        }
-
-        .header {
-            font-size: 10px;
-        }
     }
 </style>
