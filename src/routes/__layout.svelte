@@ -11,8 +11,11 @@
     })
 
     const themes = [
-        "cool-breeze", "crimson", "forest", "light"
+        "cool-breeze", "crimson", "forest"
     ]
+    if (themes.indexOf($theme) == -1) {
+        $theme = "cool-breeze";
+    }
     function nextTheme() {
         $theme = themes[(themes.indexOf($theme) + 1) % themes.length];
         window.localStorage.setItem("theme", $theme);
