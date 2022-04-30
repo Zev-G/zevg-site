@@ -77,10 +77,10 @@ const chess = new ProjectElement(
         ),
         new ProjectElement(Date.parse("Apr 20 2022"), Date.parse("May 3 2022"), "Creating Computer Opponents", "",
             [
-                projectElem("Apr 22 2022", "Allow for computer opponents", "At this point in the chess project the code doesn't support non-human opponents. Some code refactoring will need to be done to allow for the computer to handle its own turns.", SimpleEntry, "none"),
+                projectElem("Apr 22 2022", "Allow for computer opponents", "At this point in the chess project the code doesn't support non-human opponents. Some code refactoring will need to be done to allow for the computer to handle its own turns.", SimpleEntry, "started"),
                 projectElem("Apr 25 2022", "Implement Minimax opponent", "The plan isn't to create an insane computer opponent, just a Minimax based opponent. An explanation of the Minimax Algorithm can be found with a quick Google search.", SimpleEntry, "none"),
                 projectElem("May 1 2022", "Optimization", "To make the Minimax opponent more effective I'll need to optimize the program so that moves can be simulated more efficiently.", SimpleEntry, "none")
-            ], SimpleEntry, "none"
+            ], SimpleEntry, "started"
         ),
         new ProjectElement(Date.parse("May 3 2022"), Date.parse("June 1 2022"), "Polishing and Extra Features", "To be determined",
             [
