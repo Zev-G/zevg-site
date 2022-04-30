@@ -71,9 +71,9 @@ const chess = new ProjectElement(
                 projectElem("Mar 26 2022", "Board and pieces", "Once the page is hosted the next step is to initialize a chess board with the correct pieces. This will require picking a color scheme and images for the chess pieces.", SimpleEntry, "done"),
                 projectElem("Mar 31 2022", "Basic piece moving", "This will be the first piece of logic that needs to be implemented. Every piece moves in a unique way, so a way of generating moves based on the board state and piece type needs to be created.", SimpleEntry, "done"),
                 projectElem("Apr 5 2022", "Complex piece moving", "During this section of the project I will add more complex movements to certain pieces. This includes castling and en passant.", SimpleEntry, "done"),
-                projectElem("Apr 10 2022", "Game rules", "Once the pieces can move the rules of the game need to be added. Chess has quite a few rules but some which will be difficult to implement are: pawn promotion, checkmating, not moving into check, and all of chess' draw conditions.", SimpleEntry, "started"),
+                projectElem("Apr 10 2022", "Game rules", "Once the pieces can move the rules of the game need to be added. Chess has quite a few rules but some which will be difficult to implement are: pawn promotion, checkmating, not moving into check, and all of chess' draw conditions.", SimpleEntry, "done"),
                 projectElem("Apr 15 2022", "Players and turns", "The last thing which will need to be created for a functional game of chess is turn management and displaying the winner.", SimpleEntry, "done")
-            ], SimpleEntry, "started"
+            ], SimpleEntry, "done"
         ),
         new ProjectElement(Date.parse("Apr 20 2022"), Date.parse("May 3 2022"), "Creating Computer Opponents", "",
             [
