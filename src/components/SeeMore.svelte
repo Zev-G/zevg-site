@@ -48,7 +48,7 @@
         filter: drop-shadow(0 0 8px var(--drop-shadow-color));
         cursor: pointer;
 
-        background-color: var(--sub-item-bg);
+        background-color: var(--alt3-bg);
         z-index: 1;
     }
     .link-container::before {

@@ -1,22 +1,23 @@
 * {
     --main-bg: #ffffff;
-    --alt-bg: #e7e7e7;
-    --alt2-bg: rgb(191 191 198);
-    --alt3-bg: rgb(156 156 167);
+    --alt-bg: #f4f4f4;
+    --alt2-bg: rgb(232, 232, 234);
+    --alt3-bg: rgb(228, 228, 228);
 
     --light-tint: rgba(55, 58, 70, 0.05);
     --main-accent-tint: rgba(103, 145, 253, 0.3);
     --alt-accent-tint: rgba(180, 103, 253, 0.3);
 
-    --alt-text: rgb(44, 44, 44);
     --main-text: rgb(33 33 33);
+    --alt-text: rgb(42, 42, 42);
+    --alt2-text: rgb(101, 101, 101);
     --main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
     --between-color: rgb(70, 74, 80);
 
-    --item-bg: #f6f6f6;
-    --sub-item-bg: #a9adbf;
-    --sub2-item-bg: rgb(146 151 170);
+    --item-bg: #fcfcfc;
+    --sub-item-bg: #d4eaff;
+    --sub2-item-bg: #d1f0ff;
 
     --drop-shadow-color: rgba(0, 0, 0, 0.144);
 

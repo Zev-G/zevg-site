@@ -68,6 +68,9 @@
         margin: 5% 0;
         padding: 0 2% 2% 2%;
         border-radius: 25px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--alt2-bg);
         text-align: center;
     }
 

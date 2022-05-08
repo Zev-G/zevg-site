@@ -130,6 +130,9 @@
         padding: 0.75em 1.2em;
         background-color: var(--item-bg);
         border-radius: 0.5em;
+        border-width: 1px;
+        border-style: solid;
+        border-color: var(--alt2-bg);
         box-shadow: 0px 4px 4px var(--drop-shadow-color);
         
         transition: transform 0.2s;
