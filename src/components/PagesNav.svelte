@@ -29,9 +29,6 @@
         margin-top: 0.25em;
         border-radius: 10px;
         filter: drop-shadow(0 0 8px var(--drop-shadow-color));
-    }
-
-    .dropdown-content {
         background-color: var(--alt3-bg);
         padding: 0.2em 0.5em 0.5em 0.5em;
     }
