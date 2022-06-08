@@ -108,6 +108,6 @@ button.simple {
     font-family: var(--main-font);
     padding: 0;
     margin: none;
-    border-width: 0px;
+    border-width: 0;
     background: none;
 }

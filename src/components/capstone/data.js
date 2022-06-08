@@ -79,15 +79,19 @@ const chess = new ProjectElement(
             [
                 projectElem("Apr 22 2022", "Allow for computer opponents", "At this point in the chess project the code doesn't support non-human opponents. Some code refactoring will need to be done to allow for the computer to handle its own turns.", SimpleEntry, "done"),
                 projectElem("Apr 25 2022", "Implement Minimax opponent", "The plan isn't to create an insane computer opponent, just a Minimax based opponent. An explanation of the Minimax Algorithm can be found with a quick Google search.", SimpleEntry, "done"),
-                projectElem("May 1 2022", "Optimization", "To make the Minimax opponent more effective I'll need to optimize the program so that moves can be simulated more efficiently.", SimpleEntry, "started")
-            ], SimpleEntry, "started"
+                projectElem("May 1 2022", "Optimization", "To make the Minimax opponent more effective I'll need to optimize the program so that moves can be simulated more efficiently.", SimpleEntry, "done")
+            ], SimpleEntry, "done"
         ),
-        new ProjectElement(Date.parse("May 3 2022"), Date.parse("June 1 2022"), "Polishing and Extra Features", "To be determined",
+        new ProjectElement(Date.parse("May 3 2022"), Date.parse("June 1 2022"), "Polishing and Extra Features", "",
             [
-                projectElem("May 15 2022", "To be determined", "The specific features which I want to implement haven't yet been determined.", SimpleEntry, "none")
+                projectElem("May 7 2022", "Draggable pieces", "Players should have the ability to drag pieces to move them.", SimpleEntry, "done"),
+                projectElem("May 12 2022", "Animated piece movement", "The movement of pieces being animated rather than jumping from spot to spot. This is a QoL feature which would make the game more visually appealing.", SimpleEntry, "done"),
+                projectElem("May 16 2022", "Move side bar", "Throughout games it would be nice to be able to see a simple list of all the moves which have occured. The plan is to display this to the right of the chess board.", SimpleEntry, "done"),
+                projectElem("May 20 2022", "Board editor", "Currently, making visual graphics of chess boards is quite tedious, especially when you want a board of a size other than 8x8. I want to give users a tool to easily design a chessboard of various sizes.", SimpleEntry, "done"),
+                projectElem("May 27 2022", "Done", "At this point the basic chess game (and a little more) I envisioned has been created. I want to continue to add features to it but I feel that at this point I have a nice looking and functional chess game.", SimpleEntry, "done")
             ]
         )
-    ], SimpleEntry, "started"
+    ], SimpleEntry, "done"
 );
 
 const nextYear = new ProjectElement(
