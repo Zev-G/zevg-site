@@ -64,7 +64,7 @@ const website = new ProjectElement(Date.parse("Feb 26 2022"), Date.parse("June 2
 
 const chess = new ProjectElement(
     Date.parse("Apr 10 2022"), Date.parse("Apr 10 2022"), "Make a Chess Site",
-    "I've already created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, allow games to be loaded from FENs, and look decent.", [
+    "I've already created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, and look decent.", [
         new ProjectElement(Date.parse("Mar 18 2022"), Date.parse("Apr 20 2022"), "Basic Game", "",
             [
                 projectElem("Mar 21 2022", "Project and hosting setup", "The first step in starting this project is deciding how I want to structure it. I (currently) plan on using Svelte for my UI framework and Vercel for hosting.", SimpleEntry, "done"),
