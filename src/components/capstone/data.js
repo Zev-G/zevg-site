@@ -89,10 +89,10 @@ const chess = new ProjectElement(
                 projectElem("May 16 2022", "Move side bar", "Throughout games it would be nice to be able to see a simple list of all the moves which have occured. The plan is to display this to the right of the chess board.", SimpleEntry, "done"),
                 projectElem("May 20 2022", "Board editor", "Currently, making visual graphics of chess boards is quite tedious, especially when you want a board of a size other than 8x8. I want to give users a tool to easily design a chessboard of various sizes.", SimpleEntry, "done"),
                 projectElem("May 27 2022", "Done", "At this point the basic chess game (and a little more) I envisioned has been created. I want to continue to add features to it but I feel that at this point I have a nice looking and functional chess game.", SimpleEntry, "done")
-            ]
+            ], SimpleEntry, "done"
         )
     ], SimpleEntry, "done"
-);
+, SimpleEntry, "done");
 
 const nextYear = new ProjectElement(
     Date.parse("Jun 1 2022"), Date.parse("Jun 1 2022"), "Get ready for next year",
