@@ -15,6 +15,7 @@
     import Timeline from "../../../components/Timeline.svelte";
     import EntrySection from "../../../components/capstone/projects/EntrySection.svelte";
     import SeeMore from "../../../components/SeeMore.svelte";
+import ChessLink from "../../../components/capstone/projects/chess/ChessLink.svelte";
 
     export let id;
 
@@ -26,6 +27,8 @@
     let rootFullEntry;
 
     $: pageTimeline = timeline.points[id];
+    $: topDisplay = pageTimeline !== null ? pageTimeline.topDisplay : null;
+    $: console.log(pageTimeline);
 
     let showPagesNav = false;
 
@@ -92,6 +95,9 @@
         <Timeline timeline={displayedTimeline} readFullEntries={true} on:goToEntry={(event) => goToEntry(event.detail.point)}/>
     {/if}
     <hr class="darker">
+    {#if topDisplay !== null}
+        <svelte:component this={topDisplay} />
+    {/if}
     {#if pageTimeline}
         <EntrySection bind:this={rootFullEntry} entry={pageTimeline} expanded={true}/>
     {/if}

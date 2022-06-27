@@ -8,8 +8,9 @@ export default class ProjectElement {
     explanation;
     points;
     detailedView;
+    topDisplay;
 
-    constructor(start, end, name, explanation = "", points = [], detailedView = SimpleEntry, progress = null) {
+    constructor(start, end, name, explanation = "", points = [], detailedView = SimpleEntry, progress = null, topDisplay = null) {
         this.start = start;
         this.end = end;
         this.points = points;
@@ -17,5 +18,6 @@ export default class ProjectElement {
         this.name = name;
         this.detailedView = detailedView;
         this.progress = progress;
+        this.topDisplay = topDisplay;
     }
 }

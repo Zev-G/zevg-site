@@ -11,6 +11,7 @@ import RoutingEntry from "./projects/landing-page/RoutingEntry.svelte";
 import NavigationEntry from "./projects/landing-page/NavigationEntry.svelte";
 import MultipleTimelinesEntry from "./projects/landing-page/MultipleTimelinesEntry.svelte";
 import DetailedExplanationEntry from "./projects/landing-page/DetailedExplanationEntry.svelte";
+import ChessLink from "./projects/chess/ChessLink.svelte";
 
 export const qnas = [
     {
@@ -91,8 +92,8 @@ const chess = new ProjectElement(
                 projectElem("May 27 2022", "Done", "At this point the basic chess game (and a little more) I envisioned has been created. I want to continue to add features to it but I feel that at this point I have a nice looking and functional chess game.", SimpleEntry, "done")
             ], SimpleEntry, "done"
         )
-    ], SimpleEntry, "done"
-, SimpleEntry, "done");
+    ],
+SimpleEntry, "done", ChessLink);
 
 const nextYear = new ProjectElement(
     Date.parse("Jun 1 2022"), Date.parse("Jun 1 2022"), "Get ready for next year",
