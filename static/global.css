@@ -106,6 +106,7 @@ button.simple {
     font-size: 1em;
     font-weight: normal;
     font-family: var(--main-font);
+    color: var(--main-text);
     padding: 0;
     margin: none;
     border-width: 0;

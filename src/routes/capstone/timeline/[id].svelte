@@ -15,7 +15,7 @@
     import Timeline from "../../../components/Timeline.svelte";
     import EntrySection from "../../../components/capstone/projects/EntrySection.svelte";
     import SeeMore from "../../../components/SeeMore.svelte";
-import ChessLink from "../../../components/capstone/projects/chess/ChessLink.svelte";
+    import ChessLink from "../../../components/capstone/projects/chess/ChessLink.svelte";
 
     export let id;
 
