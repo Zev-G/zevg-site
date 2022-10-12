@@ -35,16 +35,7 @@
         </div>
         <div class="content-wrapper">
             <div class="content">
-                <p>
-                    My chess game for web... Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad a totam minima, eligendi repudiandae cupiditate alias doloribus mollitia. Corrupti voluptatum eveniet temporibus molestiae magnam doloribus soluta earum voluptate adipisci qui.
-                </p>
-                <p>
-                    Anim voluptate aute culpa occaecat do cillum aute laborum ea labore. Occaecat Lorem irure voluptate sit proident elit. Amet in et mollit irure nulla velit amet incididunt ipsum magna eiusmod reprehenderit laboris ullamco.
-                    Do excepteur quis non commodo duis elit nostrud. Laboris esse aliquip nostrud mollit labore dolor aute irure in cupidatat nisi pariatur amet eu. Exercitation ullamco veniam ipsum labore culpa aute culpa anim quis culpa Lorem et ex nisi. Sunt elit dolore occaecat eiusmod. Aliqua ullamco nisi voluptate aliqua aliqua et eu sint velit. Aute mollit ipsum sint id proident aliquip amet et cupidatat qui ea elit velit.
-                </p>
-                <p>
-                    Deserunt laboris ullamco sint commodo duis magna sunt cupidatat officia velit aliqua. In sit minim consequat nostrud fugiat voluptate qui sunt deserunt. Ullamco eiusmod irure Lorem dolore consequat adipisicing nostrud. Culpa id commodo commodo ut ea proident ut ipsum aliqua duis. Non deserunt culpa reprehenderit consectetur consequat fugiat ad non. Labore Lorem laborum laboris esse nisi in culpa laboris ullamco in deserunt.
-                </p>
+                
             </div>
         </div>
     </div>

@@ -1,0 +1,157 @@
+[
+    {
+        "name": "Chess (Web)",
+        "summary": "A fully functional two-player chess game made for the web. The game features a sleek UI, pretty animations, minimax-based computer opponents, and more.",
+        "image": "chess_web.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://www.zevg.ca/chess"
+            },
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/chess-site"
+            }
+        ],
+        "details": {
+            "overview": {
+                "render": "SimpleOverview.svelte",
+                "data": {
+                    "video": null,
+                    "text": ""
+                }
+            }
+        }
+    },
+    {
+        "name": "Capstone Site",
+        "summary": "A functional and aesthetic website to showcase my Capstone progress, and personal projects. This website is constantly in development as I work on my Capstone Project.",
+        "image": "capstone.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://www.zevg.ca/capstone"
+            },
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/zevg-site"
+            }
+        ]
+    },
+    {
+        "name": "JavaFX IDE",
+        "summary": "A text editor made to edit code. This project includes simple extensions, a file tree, and basic language support for a few languages.",
+        "image": "ide.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/JfxIDE"
+            }
+        ]
+    },
+    {
+        "name": "Drawing App",
+        "summary": "A drawing app with an infinite canvas. The app supports multiple layers, and different brush colors. This project was discontinued due to internal issues with JavaFX.",
+        "image": "drawing.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/Drawing-App"
+            }
+        ]
+    },
+    {
+        "name": "Programming Language",
+        "summary": "An interpreted scripting programming language that runs within a Java program. It shares a similiar syntax to java and has access to Java's standard library.",
+        "image": "lang.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/ProgrammingLanguage"
+            }
+        ]
+    },
+    {
+        "name": "Transition Animator",
+        "summary": "One of my first programming projects. A tool to design animations for JavaFX. This app allows developers to visually see their transitions while they create them, and export them to copy-and-pastable code.",
+        "image": "transition_maker.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/TransitonMaker"
+            }
+        ]
+    },
+    {
+        "name": "JFXPlus",
+        "summary": "A much needed set of devtools and components for JavaFX development. Includes customizable visual editors for most properties used in JavaFX, as well as devtools to interact with and edit your program live.",
+        "image": "jfxplus.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/JFXPlus"
+            }
+        ]
+    },
+    {
+        "name": "Chess (Desktop)",
+        "summary": "a chess.com inspired chess game. Features many similiar features to the web chess game documented on this page. This chess game is created in JavaFX and runs as a standalone application.",
+        "image": "chess_desktop.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/Chess"
+            }
+        ]
+    },
+    {
+        "name": "Zerades",
+        "summary": "A simple game inspired by sherades in which players write elements of prompts which are combined to create funny and unexpected results.",
+        "image": "zerades.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://www.github.com/Zev-G/Zerades"
+            }
+        ]
+    },
+    {
+        "name": "Points!",
+        "summary": "An application made to allow you to play with points and curves. It's pretty easy and enjoyable to use and even lets you animate frames.",
+        "image": "points.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://github.com/Zev-G/PointAnimation"
+            }
+        ]
+    },
+    {
+        "name": "Visualizations",
+        "summary": "A series of small projects meant to visualize specific things. Most of these projects were short fun learning experiments that had some cool results.",
+        "image": "visualizations.png",
+        "links": [
+            {
+                "icon": "github",
+                "name": "Physics",
+                "url": "https://github.com/PhysicsDrawing"
+            },
+            {
+                "icon": "github",
+                "name": "Shapes",
+                "url": "https://github.com/Zev-G/AnimatedShapes"
+            }
+        ]
+    },
+    {
+        "name": "Robotics",
+        "summary": "My work with the Esquimalt High School Robotics team. This school year (2022/2023) I'm the programming team captain, and have been the primary developer for the team for the past ~3 years.",
+        "image": "robotics.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://github.com/Esquimalt-Atom-Smashers"
+            }
+        ]
+    }
+]

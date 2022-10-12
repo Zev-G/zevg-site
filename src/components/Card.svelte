@@ -50,7 +50,7 @@
     }
 
     .card:hover {
-        transform: scale(1.03) translateY(-5px);
+        transform: translateY(-12px);
     }
 
     .content {

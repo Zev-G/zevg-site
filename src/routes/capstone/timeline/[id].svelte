@@ -28,7 +28,6 @@
 
     $: pageTimeline = timeline.points[id];
     $: topDisplay = pageTimeline !== null ? pageTimeline.topDisplay : null;
-    $: console.log(pageTimeline);
 
     let showPagesNav = false;
 

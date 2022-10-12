@@ -7,7 +7,7 @@
         <a href={href} on:click tabindex="0">
             <div class="link-container">
                 <div class="inner">
-                    <span><slot></slot></span>
+                    <slot></slot>
                 </div>
             </div>
         </a>
@@ -15,7 +15,7 @@
         <button class="simple" on:click tabindex="0">
             <div class="link-container">
                 <div class="inner">
-                    <span><slot></slot></span>
+                    <slot></slot>
                 </div>
             </div>
         </button>
@@ -26,15 +26,13 @@
 <style>
     a {
         text-decoration: none;
-    }
-
-    span {
-        font-family: var(--monospace);
-        font-weight: bold;
         color: var(--alt-text);
     }
 
     .see-more {
+        font-family: var(--monospace);
+        font-weight: bold;
+        color: var(--alt-text);
         display: flex;
         justify-content: center;
 

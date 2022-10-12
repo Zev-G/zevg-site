@@ -8,8 +8,6 @@
     let wasMounted;
     let matches = true;
 
-    $: console.log(matches);
-
     onMount(() => {
         wasMounted = true;
         return () => {

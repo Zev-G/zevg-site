@@ -2,7 +2,11 @@
     export let value;
 </script>
 
-<a href={value.URL}>{value.view}</a>
+<a href={value.URL}>
+    <slot>
+        {value.view}
+    </slot>
+</a>
 
 <style>
     a {
