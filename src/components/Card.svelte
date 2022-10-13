@@ -4,19 +4,20 @@
 </script>
 
 <div class="card">
-    <a href={href}>
+    <!-- <a href={href}> -->
         <img alt="Card showcase" src={imgSrc}>
         <div class="content">
             <slot name="heading"></slot>
             <slot name="content"></slot>
         </div>
-    </a>
+    <!-- </a> -->
 </div>
 
 
 <style>
     img {
-        /* aspect-ratio: 4 / 2; */
+        aspect-ratio: 4 / 2;
+        object-fit: cover;
         width: clamp(100px, 40vw, 500px);
         border-radius: 1rem 1rem 0 0;
     }
@@ -31,11 +32,15 @@
         background-color: var(--item-bg);
         border-radius: 1rem;
         filter: drop-shadow(0px 0px 4px var(--drop-shadow-color));
-        cursor: pointer;
+        /* cursor: pointer; */
         transition: transform 0.2s;
         width: clamp(100px, 40vw, 500px);
 
-        font-size: clamp(10px, 2vw, 20px);
+        font-size: clamp(8px, 1.6vw, 16px);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     @media(max-width: 750px) {

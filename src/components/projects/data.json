@@ -39,6 +39,17 @@
         ]
     },
     {
+        "name": "Robotics",
+        "summary": "My work with the Esquimalt High School Robotics team. This school year (2022/2023) I'm the programming team captain, and have been the primary developer for the team for the past ~3 years.",
+        "image": "robotics.png",
+        "links": [
+            {
+                "icon": "github",
+                "url": "https://github.com/Esquimalt-Atom-Smashers"
+            }
+        ]
+    },
+    {
         "name": "JavaFX IDE",
         "summary": "A text editor made to edit code. This project includes simple extensions, a file tree, and basic language support for a few languages.",
         "image": "ide.png",
@@ -134,23 +145,12 @@
             {
                 "icon": "github",
                 "name": "Physics",
-                "url": "https://github.com/PhysicsDrawing"
+                "url": "https://github.com/Zev-G/PhysicsDrawing"
             },
             {
                 "icon": "github",
                 "name": "Shapes",
                 "url": "https://github.com/Zev-G/AnimatedShapes"
-            }
-        ]
-    },
-    {
-        "name": "Robotics",
-        "summary": "My work with the Esquimalt High School Robotics team. This school year (2022/2023) I'm the programming team captain, and have been the primary developer for the team for the past ~3 years.",
-        "image": "robotics.png",
-        "links": [
-            {
-                "icon": "github",
-                "url": "https://github.com/Esquimalt-Atom-Smashers"
             }
         ]
     }
