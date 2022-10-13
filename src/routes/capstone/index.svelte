@@ -40,6 +40,10 @@
         <hr>
         <BigQuestion question="About Me">
             <p class="about-me">I'm a 16 year old developer living in Victoria BC. I've been programming primarily in Java since early 2020 but I also have smaller projects in a variety of languages and frameworks. Lately I've been learning web technologies while developing my website and working on my Capstone Project for school.</p>
+            <br>
+            <p class="about-me">
+                In addition to programming and studying for school my favorite activites include: spending time with friends, going for long solo walks, working with kids, and these past few months I've taken up piano and long distance running.
+            </p>
         </BigQuestion>
         <div class="sections">
             {#each qnas as qna}
