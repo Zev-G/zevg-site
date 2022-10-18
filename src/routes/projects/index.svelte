@@ -13,13 +13,13 @@
     </div>
     <hr>
     <!-- TODO remove after I graduate -->
-    <div class="about-me">
+    <!-- <div class="about-me">
         <h2>Thank you for visiting my portfolio.</h2>
         <p>I'm a 16 year old developer living in Victoria BC. I've been programming primarily in Java since early 2020 but I also have smaller projects in a variety of languages and frameworks. Lately I've been learning web technologies while developing my website and working on my Capstone Project for school.</p>
         <p>
             In addition to programming and studying for school my favorite activites include: spending time with friends, going for long solo walks, working with kids, and these past few months I've taken up piano and long distance running.
         </p>
-    </div>
+    </div> -->
     <div class="cards-wrapper">
         <div id="cards">
             {#each data as card}
