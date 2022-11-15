@@ -59,19 +59,6 @@
                 </p>
             </div>
         </Section>
-        <Section>
-            <h1 class="header-h1" slot="header">Possible mentors</h1>
-            <div slot="content">
-                <p>
-                    My possible mentors include:
-                </p>
-                <ul>
-                    <li>Dalton</li>
-                    <li>Mrs Okeefe</li>
-                    <li>Reuben's Dad</li>
-                </ul>
-            </div>
-        </Section>
     </div>
 </div>
 

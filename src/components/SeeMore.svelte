@@ -30,7 +30,6 @@
     }
 
     .see-more {
-        font-family: var(--monospace);
         font-weight: bold;
         color: var(--alt-text);
         display: flex;
@@ -42,6 +41,7 @@
     .link-container {
         padding: 2px;
         border-radius: 0.2em;
+        font-family: var(--monospace);
 
         filter: drop-shadow(0 0 8px var(--drop-shadow-color));
         cursor: pointer;

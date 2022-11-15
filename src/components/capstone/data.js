@@ -64,8 +64,8 @@ const website = new ProjectElement(Date.parse("Feb 26 2022"), Date.parse("June 2
 ], SimpleEntry, "done");
 
 const chess = new ProjectElement(
-    Date.parse("Apr 10 2022"), Date.parse("Apr 10 2022"), "Make a Chess Site",
-    "I've already created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, and look decent.", [
+    Date.parse("Apr 10 2022"), Date.parse("Apr 10 2022"), "Make a chess Site",
+    "I've created chess twice, but never for the web. The plan is to create a simple two-player chess game and have it hosted on a website. This chess game needs to meet the following criteria: include all official chess rules, be built with either React or Svelte, and look good.", [
         new ProjectElement(Date.parse("Mar 18 2022"), Date.parse("Apr 20 2022"), "Basic Game", "",
             [
                 projectElem("Mar 21 2022", "Project and hosting setup", "The first step in starting this project is deciding how I want to structure it. I (currently) plan on using Svelte for my UI framework and Vercel for hosting.", SimpleEntry, "done"),
@@ -100,9 +100,31 @@ const nextYear = new ProjectElement(
     "Decide what my future goals are for my grade 12 year and document them in a timeline similar to this one."
 );
 
-export const timeline = new ProjectElement(
-    Date.parse("Feb 1 2022"), Date.parse("Jun 23 2022"), "Capstone Timeline",
-    "My Capstone Timeline", [
+export const grade11 = new ProjectElement(
+    Date.parse("Feb 1 2022"), Date.parse("Jun 23 2022"), "Grade 11", "",
+    [
         website, chess, nextYear
+    ]
+);
+
+const expectationsForTheYear = new ProjectElement(
+    Date.parse("Sep 30 2022"), Date.parse("Sep 30 2022"), "This year's expectations",
+    "This year my primary focus is going to be on school work, and with three tough academics in my first semester that means good time management. As a result I won't be able to dedicate as much time to my capstone as I did in grade 11. That being said, I still want to continue to work on my capstone this year, just at a slower pace than previously."
+)
+
+const showcaseProjects = new ProjectElement(
+    Date.parse("Jan 10 2023"), Date.parse("Jan 10 2023"), "Showcase my projects", "The first big project that I want to takcle this year is an improvement on the showcase of my programming projects. Currently, each project just has a brief description, an image, and a link to its relevant github page and/or webstie. My goal for 2022 and the beginning of 2023 is to create a more detailed explanation for each projects. I would like to provide a showcase of each project, as well as a narrative explaining how it came to be and a technical overveiw of the code behind the scene.", []
+);
+
+export const grade12 = new ProjectElement(
+    Date.parse("Sep 6 2022"), Date.parse("Jun 23 2023"), "Grade 12", "", [
+        expectationsForTheYear, showcaseProjects
+    ]
+)
+
+export const timeline = new ProjectElement(
+    Date.parse("Feb 1 2022"), Date.parse("Jun 23 2023"), "Capstone Timeline",
+    "My Capstone Timeline", [
+        grade11, grade12
     ]
 );

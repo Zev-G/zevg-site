@@ -10,7 +10,7 @@
 
 <script>
     import PagesNav from "../../../components/PagesNav.svelte";
-    import { timeline } from "../../../components/capstone/data";
+    import { grade11, grade12, timeline } from "../../../components/capstone/data";
     import Timelines from "../../../components/Timelines.svelte";
     import Timeline from "../../../components/Timeline.svelte";
     import EntrySection from "../../../components/capstone/projects/EntrySection.svelte";
@@ -18,6 +18,21 @@
     import ChessLink from "../../../components/capstone/projects/chess/ChessLink.svelte";
 
     export let id;
+    $: effectiveId = id.length > 3 ? id.substring(3) : null;
+
+    let pageTimeline;
+    let gradeTimeline;
+    $: {
+        if (id.startsWith("11-")) {
+            gradeTimeline = grade11;
+        } else if (id.startsWith("12-")) {
+            gradeTimeline = grade12;
+        } else {
+            throw new Exception("Invalid URL");
+        }
+
+        pageTimeline = gradeTimeline.points[effectiveId];
+    };
 
     let displayedTimeline = null;
     $: {
@@ -26,16 +41,16 @@
     }
     let rootFullEntry;
 
-    $: pageTimeline = timeline.points[id];
+    
     $: topDisplay = pageTimeline !== null ? pageTimeline.topDisplay : null;
 
     let showPagesNav = false;
 
     function findTimelineMatchingDate(date) {
-        if (!timeline || !timeline.points || !timeline.points[id]) {
+        if (!gradeTimeline || !gradeTimeline.points || !gradeTimeline.points[effectiveId]) {
             return null;
         }
-        let timelines = timeline.points[id].points;
+        let timelines = gradeTimeline.points[effectiveId].points;
         if (date <= timelines[0].start) return timelines[0];
         if (date >= timelines[timelines.length - 1].end) {
             return timelines[timelines.length - 1];
@@ -48,6 +63,16 @@
 
     function goToEntry(entry) {
         rootFullEntry.expandEntry(entry, true);
+    }
+
+    function gradeHasTimeline(grade) {
+        if (!grade || !grade.points || grade.points.length == 0) {
+            return false;
+        }
+        for (let point of grade.points) {
+            if (point && point.points && point.points.length > 0) return true;
+        }
+        return false;
     }
 </script>
 
@@ -70,21 +95,29 @@
                             </div>
                         </a>
                     </li>
-                    {#each timeline.points as point, i}
-                        {#if point.points.length > 0}
-                            <li class={i == id ? "selected" : ""}>
-                                <a href={`/capstone/timeline/${i}`} on:click={() => showPagesNav = false}>
-                                    <div class="hyperlink-content">
-                                        {point.name}
-                                    </div>
-                                </a>
+                    {#each timeline.points as grade}
+                        {#if gradeHasTimeline(grade)}
+                            <li class="grade">
+                                {grade.name}
                             </li>
-                        {/if}        
+                        {/if}
+                        {#each grade.points as point, i}
+                            {#if point.points.length > 0}
+                                <li class={i == effectiveId ? "selected" : ""}>
+                                    <a href={`/capstone/timeline/${grade.name.substring(grade.name.length - 2) + "-" + i}`} on:click={() => showPagesNav = false}>
+                                        <div class="hyperlink-content">
+                                            {point.name}
+                                        </div>
+                                    </a>
+                                </li>
+                            {/if}        
+                        {/each}
                     {/each}
+                    
                 </ul>
             </PagesNav>
         </div>
-        <h1 class="page-title-s">{timeline.points[id] ? timeline.points[id].name : "Loading..."}</h1>
+        <h1 class="page-title-s">{pageTimeline ? pageTimeline.name : "Loading..."}</h1>
         <div class="timeline-selector">
             <Timelines timelines={pageTimeline ? pageTimeline.points : null} bind:selected={displayedTimeline}/>
         </div>
@@ -144,6 +177,11 @@
 
     li:not(:last-child) {
         margin-bottom: 0.3em;
+    }
+    .grade {
+        margin-left: 0.5em;
+        color: var(--alt2-text);
+        font-weight: 500;
     }
 
     .hyperlink-content {

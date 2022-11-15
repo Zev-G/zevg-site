@@ -13,6 +13,8 @@
     export let linkFullRead = false;
 
     $: passed = point.start <= (timeline.at ? timeline.at : Date.now());
+    //TODO the timeline should probably be have access to it's owner, or the grade information should be passed to the timeilne entry (not convenient). Either way, this is really bad for refactoring.
+    $: grade = timeline.name == "Grade 11" ? "11" : "12"; 
     $: index = timeline.points.indexOf(point);
 
     $: viewMore = point.points.length > 0;
@@ -37,7 +39,7 @@
             <hr>
             <p>{point.explanation}</p>
             {#if viewMore}
-                <SeeMore href={`/capstone/timeline/${index}`}>
+                <SeeMore href={`/capstone/timeline/${grade + "-" + index}`}>
                     View progress >
                 </SeeMore>
             {:else if linkFullRead && point.detailedView !== SimpleEntry}
@@ -55,6 +57,7 @@
 
     .content > :global(.see-more) {
         font-size: 20px;
+        font-family: var(--monospace);
     }
     .content :global(.inner) {
         background-color: var(--alt-bg);

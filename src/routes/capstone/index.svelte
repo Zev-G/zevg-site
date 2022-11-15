@@ -9,7 +9,10 @@
 
     import CapstoneQuestion from "../../components/capstone/CapstoneQuestion.svelte";
 
-    import { timeline, qnas } from "../../components/capstone/data";
+    import { timeline, grade12, qnas } from "../../components/capstone/data";
+    import Timelines from "../../components/Timelines.svelte";
+
+    let displayedTimeline = grade12;
 
     function navigateToPoint(point) {
         if (point.points.length > 0) {
@@ -28,7 +31,10 @@
             <h1 class="page-title">My Capstone</h1>
             <h2 class="subtitle">Zev Godfrey</h2>
         </div>
-        <Timeline timeline={timeline} on:goToEntry={(event) => navigateToPoint(event.detail.point)} />
+        <div class="timeline-selector">
+            <Timelines timelines={timeline.points} bind:selected={displayedTimeline}/>
+        </div>
+        <Timeline timeline={displayedTimeline} on:goToEntry={(event) => navigateToPoint(event.detail.point)} />
         <BigQuestion question="Capstone Question">
             <CapstoneQuestion/>
         </BigQuestion>
@@ -64,6 +70,11 @@
         margin-top: 3vh;
         border: none;
         border-top: 5px solid var(--sub-item-bg);
+    }
+
+    .timeline-selector {
+        padding-left: clamp(10px, 2vw, 30px);
+        padding-bottom: clamp(2px, 1vh, 10px);
     }
 
     .sections h1 {
