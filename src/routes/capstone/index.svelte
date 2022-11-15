@@ -16,7 +16,7 @@
 
     function navigateToPoint(point) {
         if (point.points.length > 0) {
-            goto(`/capstone/timeline/${timeline.points.indexOf(point)}`);
+            goto(`/capstone/timeline/${displayedTimeline.name.substring(displayedTimeline.name.length - 2) + "-" + displayedTimeline.points.indexOf(point)}`);
         }
     }
 </script>
