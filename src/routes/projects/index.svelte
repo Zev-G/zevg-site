@@ -2,6 +2,7 @@
     import Card from "../../components/Card.svelte";
     import data from '../../components/projects/data.json';
     import SeeMore from "../../components/SeeMore.svelte";
+    import ImageSlides from "../../components/ImageSlides.svelte";
     import GoMarkGithub from 'svelte-icons/go/GoMarkGithub.svelte'
 
 </script>
@@ -20,6 +21,18 @@
             In addition to programming and studying for school my favorite activites include: spending time with friends, going for long solo walks, working with kids, and these past few months I've taken up piano and long distance running.
         </p>
     </div> -->
+    <div class="current-project">
+        <h1 style:grid-area="title">Current Project: A Notetaking App</h1>
+        <div style:grid-area="description">
+            <p>
+                Everyday I use my touchscreen Windows laptop with a stylus to do my homework and take notes. After trying several note taking applications and researching dozens I came to the conclusion that what I was looking for didn't quite exist. So, being a developer and a student who had just started winter break I decided to make my own.  
+            </p>
+            <p>
+                So far, the applicaion has a sophisticated file-management system that hooks directly into files on your computer, its own file format, support for importing PDFs, and a nice note-taking interface. Many features are on their way and the program is now at a point where I feel comfortable using it to do my homework.
+            </p>
+        </div>
+        <img style:grid-area="image" class="project-img" src="inkaev.png" alt="">
+    </div>
     <div class="cards-wrapper">
         <div id="cards">
             {#each data as card}
@@ -66,12 +79,47 @@
         margin: 0;
     }
 
-    .about-me {
+    .current-project {
+        display: grid;
+        grid-template-areas: 
+            "title title title title title"
+            "description description image image image";
+        gap: 5%;
+        justify-items: start;
+        text-align: left;
+        padding: 2% 2% 4% 2%;
+        margin: 2% 5%;
+        background-color: var(--sub-item-bg);
+        border-radius: 0.5rem;
+    }
+
+    .project-img {
+        width: 100%;
+        border-radius: 0.2rem;
+    }
+
+    @media(max-width: 1000px) {
+        .current-project {
+            grid-template-areas: 
+            "title"
+            "description"
+            "image";
+            justify-items: center;
+        }
+
+        .project-img {
+            display: grid;
+            justify-items: center;
+            padding: 0 0 8% 0;
+        }
+    }
+
+    /* .about-me {
         text-align: center;
         margin-left: 10vw;
         margin-right: 10vw;
         font-size: 1.2em;
-    }
+    } */
 
     .link {
         display: flex;
