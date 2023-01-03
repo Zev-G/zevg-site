@@ -28,7 +28,7 @@
                 Everyday I use my touchscreen Windows laptop with a stylus to do my homework and take notes. After trying several note taking applications and researching dozens I came to the conclusion that what I was looking for didn't quite exist. So, being a developer and a student who had just started winter break I decided to make my own.  
             </p>
             <p>
-                So far, the applicaion has a sophisticated file-management system that hooks directly into files on your computer, its own file format, support for importing PDFs, and a nice note-taking interface. Many features are on their way and the program is now at a point where I feel comfortable using it to do my homework.
+                So far, the application has a sophisticated file-management system that hooks directly into files on your computer, its own file format, support for importing PDFs, and a nice note-taking interface. Many features are on their way and the program is now at a point where I feel comfortable using it to do my homework.
             </p>
         </div>
         <img style:grid-area="image" class="project-img" src="inkaev.png" alt="">
