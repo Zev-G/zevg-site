@@ -47,7 +47,7 @@
         <span class="divide">/</span>
         <a href="/projects">Projects</a>
         <span class="divide">/</span>
-        <a href="/capstone/timeline/0">Timeline</a>
+        <a href="/capstone/timeline/11-0">Timeline</a>
     </div>
 {/if}
     
