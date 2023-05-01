@@ -89,7 +89,7 @@
         text-align: left;
         padding: 2% 2% 4% 2%;
         margin: 2% 5%;
-        background-color: var(--sub-item-bg);
+        background-color: var(--item-bg);
         border-radius: 0.5rem;
     }
 
