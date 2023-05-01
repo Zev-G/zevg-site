@@ -89,7 +89,7 @@
         text-align: left;
         padding: 2% 2% 4% 2%;
         margin: 2% 5%;
-        background-color: var(--item-bg);
+        background-color: var(--alt2-bg);
         border-radius: 0.5rem;
     }
 
@@ -169,11 +169,12 @@
 
     p {
         overflow: auto;
+        font-size: 1.1em;
     }
 
     hr {
         width: 90%;
         border: none;
-        border-top: 5px solid var(--sub-item-bg);
+        border-top: 5px solid var(--item-bg);
     }
 </style>
