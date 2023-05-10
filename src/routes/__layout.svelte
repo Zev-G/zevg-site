@@ -4,6 +4,7 @@
 
     import { writable } from "svelte/store"
     import { browser } from "$app/env"
+    import { page } from '$app/stores'
 
     export const theme = writable(browser && localStorage.getItem("theme") || "cool-breeze")
     theme.subscribe((val) => {
@@ -26,13 +27,21 @@
     <link rel="stylesheet" href={`/${$theme}.css`}/>
     <link rel="stylesheet" href="/global.css"/>
 </svelte:head>
-<div id="layout">
-    <ThemeSwitcher on:click={nextTheme}/>
-    <slot></slot>
-    <footer>
-        <Footer />
-    </footer>
-</div>
+
+{#if $page.url.pathname !== '/capstone/present'}
+    <div id="layout">
+        <ThemeSwitcher on:click={nextTheme}/>
+        <slot></slot>
+        <footer>
+            <Footer />
+        </footer>
+    </div>
+{:else}
+  <div id="layout">
+    <slot />
+  </div>
+{/if}
+
 
 <style>
     #layout {

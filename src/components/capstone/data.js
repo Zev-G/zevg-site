@@ -20,7 +20,7 @@ export const qnas = [
     },
     {
         question: "Where is this site's code?",
-        answer: "Currently this site is private on my github, but once I feel it's more complete I'll make the project public. Once that happens you will be able to find it at https://www.github.com/Zev-G."
+        answer: "You can check out the code for this website on my github at https://github.com/Zev-G/zevg-site."
     },
     {
         question: "How is this site hosted?",
@@ -99,6 +99,7 @@ const nextYear = new ProjectElement(
     Date.parse("Jun 1 2022"), Date.parse("Jun 1 2022"), "Get ready for next year",
     "Decide what my future goals are for my grade 12 year and document them in a timeline similar to this one."
 );
+nextYear.progress = "done";
 
 export const grade11 = new ProjectElement(
     Date.parse("Feb 1 2022"), Date.parse("Jun 23 2022"), "Grade 11", "",
@@ -110,15 +111,21 @@ export const grade11 = new ProjectElement(
 const expectationsForTheYear = new ProjectElement(
     Date.parse("Sep 30 2022"), Date.parse("Sep 30 2022"), "This year's expectations",
     "This year my primary focus is going to be on school work, and with three tough academics in my first semester that means good time management. As a result I won't be able to dedicate as much time to my capstone as I did in grade 11. That being said, I still want to continue to work on my capstone this year, just at a slower pace than previously."
-)
-
-const showcaseProjects = new ProjectElement(
-    Date.parse("Jan 10 2023"), Date.parse("Jan 10 2023"), "Showcase my projects", "The first big project that I want to takcle this year is an improvement on the showcase of my programming projects. Currently, each project just has a brief description, an image, and a link to its relevant github page and/or webstie. My goal for 2022 and the beginning of 2023 is to create a more detailed explanation for each projects. I would like to provide a showcase of each project, as well as a narrative explaining how it came to be and a technical overveiw of the code behind the scene.", []
 );
+
+const inkAev = new ProjectElement(
+    Date.parse("Jan 10 2023"), Date.parse("Jan 10 2023"), "Create a Notetaking App", "Every day in class I use my ASUS Zenbook Pro Flip OLED 15 UP6502ZA to take notes with a Renaisser 520C stylus. This school year I've tried out a bunch of notetaking applications, but none have been to my liking. This will be my biggest project, but I would like to create an application to take handwritten notes for my last semester of high school and for university.", []
+);
+inkAev.progress = "done";
+
+const hackathon = new ProjectElement(
+    Date.parse("May 1 2023"), Date.parse("May 1 2023"), "Hackathon", "I teamed up with two fellow programmers Alex Skvortsov and Isaac Nelson in the Royal Bay Hackathon. We created an application to redistrubte would-be wasted food to those in need. I designed and created both the homepage and the donation page, populated the markers on the map, created the navigational system, and generated our icons. During the brainstorming portion of the project I came up with the originating idea of creating an app to redistribute food.", []
+);
+hackathon.progress = "done";
 
 export const grade12 = new ProjectElement(
     Date.parse("Sep 6 2022"), Date.parse("Jun 23 2023"), "Grade 12", "", [
-        expectationsForTheYear, showcaseProjects
+        expectationsForTheYear, inkAev, hackathon
     ]
 )
 
