@@ -7,5 +7,5 @@
 <BigQuestion question="Capstone Question">
     <CapstoneQuestion/>
 </BigQuestion>
-<SeeMore href="/capstone/present/eleven">Grade 11 ></SeeMore>
+<SeeMore href="/capstone/present/timeline">Timeline ></SeeMore>
 <p></p>

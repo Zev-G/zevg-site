@@ -38,9 +38,9 @@
       background: linear-gradient(0deg, #0b1624, #311c44);
       background-size: 200vw 200vh;
 
-      -webkit-animation: BackgroundAnimation 12s ease infinite;
-      -moz-animation: BackgroundAnimation 12s ease infinite;
-      animation: BackgroundAnimation 12s ease infinite;
+      -webkit-animation: BackgroundAnimation 6s ease infinite;
+      -moz-animation: BackgroundAnimation 6s ease infinite;
+      animation: BackgroundAnimation 6s ease infinite;
     }
 
 @-webkit-keyframes BackgroundAnimation {
