@@ -1,11 +1,11 @@
 <script>
-  import SeeMore from "../../components/SeeMore.svelte";
+
+  import { fade } from "svelte/transition";
 
 </script>
 <div class="main">
-    <div class="title">
-        <h1>My Capstone</h1>
-        <SeeMore href="/capstone">Begin Presentation ></SeeMore>
+    <div class="title" transition:fade>
+        <slot></slot>
         <p></p>
         <p></p>
         <p></p>
@@ -20,6 +20,9 @@
 </div>
 
 <style>
+  section {
+    pointer-events: none;
+  }
 
     .title {
         height: 100vh;
@@ -29,10 +32,6 @@
         align-items: center;
         flex-direction: column;
         gap: 20px;
-    }
-
-    h1 {
-      margin: 0;
     }
 
     .main {

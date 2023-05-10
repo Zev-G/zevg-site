@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="/global.css"/>
 </svelte:head>
 
-{#if $page.url.pathname !== '/capstone/present'}
+{#if !$page.url.pathname.startsWith('/capstone/present')}
     <div id="layout">
         <ThemeSwitcher on:click={nextTheme}/>
         <slot></slot>

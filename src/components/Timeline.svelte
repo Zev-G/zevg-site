@@ -60,7 +60,7 @@
         }
     }
 
-    let size = 700;
+    export let size = 600;
     $: filled = Math.min(1, (at - start) / (end - start));
     $: showDateMarker = filled !== 1 && at >= start;
 
