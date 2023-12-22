@@ -45,7 +45,7 @@
         </BigQuestion>
         <hr>
         <BigQuestion question="About Me">
-            <p class="about-me">I'm a 17 year old developer from Victoria BC studying Computer Science at UofT. I've been programming primarily in Java since early 2020 but I also have projects in a variety of languages and frameworks. Lately I've been creating a handwritten note taking application which I use everyday to take notes at school.</p>
+            <p class="about-me">I'm a {new Date().getFullYear() - 2005 - (new Date().getMonth() > 11 || (new Date().getMonth() === 11 && new Date().getDate() >= 8) ? 0 : 1)} year old developer from Victoria BC studying Computer Science at UofT. I've been programming primarily in Java since early 2020 but I also have projects in a variety of languages and frameworks. Lately I've been creating a handwritten note taking application which I use everyday to take notes at school.</p>
             <br>
             <!-- <p class="about-me">
                 In addition to programming and studying for school my favorite activites include: spending time with friends, going for long solo walks, working with kids, and these past few months I've taken up piano and long distance running.
