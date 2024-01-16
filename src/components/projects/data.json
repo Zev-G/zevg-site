@@ -1,5 +1,20 @@
 [
     {
+        "name": "Zink Note",
+        "summary": "A handwritten notetaking app available for download on the Microsoft Store.",
+        "image": "zink.png",
+        "links": [
+            {
+                "name": "Website",
+                "url": "https://zink.zevg.ca/"
+            },
+            {
+                "icon": "microsoft",
+                "url": "https://apps.microsoft.com/detail/Zink%20Note/9NRQ660Z1RC4?launch=true%20%20&mode=full"
+            }
+        ]
+    },
+    {
         "name": "Chess (Web)",
         "summary": "A fully functional two-player chess game made for the web. The game features a sleek UI, pretty animations, minimax-based computer opponents, and more.",
         "image": "chess_web.png",
